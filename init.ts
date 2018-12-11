@@ -1,6 +1,8 @@
 import { preInitFn } from "astroboy.ts";
 
 preInitFn({
-  routerRoot: "/v1",
-  routerAlwaysBuild: true
+  appRoot: "/v1",
+  always: true,
+  enabled: true,
+  fileType: "ts"
 });

@@ -5,6 +5,7 @@ build:
 	cp tsconfig.npm.json dist
 	rm -rf dist/init.js
 	rm -rf dist/init.js.map
+	rm -rf dist/init.d.ts
 
 update:
 	yarn add astroboy.ts@latest

@@ -1,4 +1,4 @@
-const { preInitFn } = require("astroboy.ts");
+import { preInitFn } from "astroboy.ts";
 
 preInitFn({
   routerRoot: "/v1",

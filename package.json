@@ -1,0 +1,32 @@
+{
+  "name": "demo2.astroboy.ts",
+  "version": "1.0.0",
+  "description": "demo2.astroboy.ts",
+  "main": "index.js",
+  "scripts": {
+    "start": "ast dev --ts --inspect=64001 --tsconfig tsconfig.npm.json",
+    "dev": "ast dev --ts --inspect=64001 --tsconfig tsconfig.json",
+    "build": "tsc --project tsconfig.npm.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ws-node/demo2.astroboy.ts.git"
+  },
+  "author": "bws",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ws-node/demo2.astroboy.ts/issues"
+  },
+  "homepage": "https://github.com/ws-node/demo2.astroboy.ts#readme",
+  "devDependencies": {
+    "astroboy-cli": "^0.0.8",
+    "ts-node": "^7.0.1",
+    "tsconfig-paths": "^3.7.0",
+    "tslint": "5.11.0",
+    "typescript": "3.2.1"
+  },
+  "dependencies": {
+    "astroboy.ts": "*",
+    "tslib": "1.9.3"
+  }
+}

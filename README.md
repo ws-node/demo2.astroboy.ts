@@ -1,2 +1,2 @@
-# demo2.astroboy.ts
-demo2.astroboy.ts
+# demo of astroboy.ts
+最新功能demo

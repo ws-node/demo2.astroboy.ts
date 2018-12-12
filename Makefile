@@ -1,5 +1,5 @@
 build:
-	./node_modules/.bin/ts-node init.ts
+	./node_modules/.bin/astt router --always --filetype ts
 	rm -rf dist
 	tsc --project tsconfig.npm.json
 	cp tsconfig.npm.json dist
@@ -14,5 +14,5 @@ start-dist:
 	cd dist && ast dev
 
 dev:
-	./node_modules/.bin/ts-node init.ts
+	./node_modules/.bin/astt router --always --filetype ts
 	yarn run dev

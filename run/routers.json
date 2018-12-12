@@ -2,7 +2,7 @@
   [
     "GET",
     [
-      "/v1/api/test/get"
+      "//api/test/get"
     ],
     "test",
     "Get"
@@ -10,7 +10,7 @@
   [
     "POST",
     [
-      "/v1/api/test/post/:type"
+      "//api/test/post/:type"
     ],
     "test",
     "Post"
@@ -18,7 +18,7 @@
   [
     "GET",
     [
-      "/v1/api/test/get2/:fuck"
+      "//api/test/get2/:fuck"
     ],
     "test",
     "GetMore"
@@ -26,7 +26,7 @@
   [
     "GET",
     [
-      "/v1/api/bbb/xxcdc"
+      "//api/bbb/xxcdc"
     ],
     "sec.sxf",
     "xxx"
@@ -34,7 +34,7 @@
   [
     "GET",
     [
-      "/v1/api/aaa/wfewf"
+      "//api/aaa/wfewf"
     ],
     "sec.sdc.dfc",
     "xxx"
@@ -42,7 +42,7 @@
   [
     "GET",
     [
-      "/v1/api/ddd/wfewf"
+      "//api/ddd/wfewf"
     ],
     "sec.sdc.sdads.ads",
     "xxx"

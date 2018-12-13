@@ -1,7 +1,7 @@
 import path from "path";
 import { Server, Astroboy, JSON_RESULT_OPTIONS, JsonResolvers, ENV } from "astroboy.ts";
-import { DEMO_OPTIONS } from "../config/options/demo";
-import { STR_OPT } from "../config/options/strOpt";
+import { DEMO_OPTIONS } from "../options/demo";
+import { STR_OPT } from "../options/strOpt";
 
 // new Astroboy({
 //   ROOT_PATH: path.resolve(__dirname, "..")

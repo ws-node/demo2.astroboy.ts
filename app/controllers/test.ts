@@ -10,8 +10,8 @@ import {
   __BASE_ROUTE_DECO_FACTORY,
   RenderResult
 } from "astroboy.ts";
-import { STR_OPT } from "../../config/options/strOpt";
-import { DEMO_OPTIONS } from "../../config/options/demo";
+import { STR_OPT } from "../../options/strOpt";
+import { DEMO_OPTIONS } from "../../options/demo";
 
 function Params(key: string) {
   return FromParams({

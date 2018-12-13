@@ -5,8 +5,9 @@ import DataService from "../services/Data";
 import MixinService from "../services/mixin";
 import {
   Controller, Configs, AstroboyContext,
-  ENV, JsonResult, GET, POST, FromParams,
-  FromBody, Deserialize, IContext
+  JsonResult, GET, POST, FromParams,
+  FromBody, Deserialize, IContext,
+  __BASE_ROUTE_DECO_FACTORY
 } from "astroboy.ts";
 import { STR_OPT } from "../../config/options/strOpt";
 import { DEMO_OPTIONS } from "../../config/options/demo";
@@ -14,6 +15,17 @@ import { DEMO_OPTIONS } from "../../config/options/demo";
 function Params(key: string) {
   return FromParams({
     transform: (data) => data[key]
+  });
+}
+
+function MyGet(path: string) {
+  return __BASE_ROUTE_DECO_FACTORY({
+    method: "GET",
+    tpls: [
+      `api/{{@prefix}}/fuck-you/${path}`,
+      `m/{{@prefix}}/fuck-you-again/${path}`,
+      `xxx/{{@prefix}}/hahahahahaha/${path}`
+    ]
   });
 }
 
@@ -63,6 +75,13 @@ class TestController {
       id,
       name,
       url: ctx.url,
+    });
+  }
+
+  @MyGet("hei-hei-hei")
+  public MyGet() {
+    return new JsonResult({
+      msg: "66666666666"
     });
   }
 

@@ -4,7 +4,7 @@ module.exports = {
   watch: [
     path.join(__dirname, "app/**/*.*"),
     path.join(__dirname, "config/**/*.*"),
-    path.join(projectRoot, "plugins/**/*.*")
+    path.join(__dirname, "plugins/**/*.*")
   ],
   ignore: []
 };

@@ -16,7 +16,16 @@ Server.Create(Astroboy, {
 })
   .option(STR_OPT)
   .option(DEMO_OPTIONS)
-  .option(JSON_RESULT_OPTIONS, { format: true, keyResolver: JsonResolvers.camelcase })
+  .option(JSON_RESULT_OPTIONS, {
+    format: true,
+    keyResolver: JsonResolvers.camelcase,
+    jsonTemplate: {
+      code: 0,
+      message: "success",
+      data: null
+    },
+    jsonTplKey: "data"
+  })
   .run({
     onStart: () => console.log("hello world!"),
     onError: (err) => console.log(`fuck it : ${String(err)}`)

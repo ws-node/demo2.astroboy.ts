@@ -7,7 +7,8 @@ import {
   Controller, Configs, AstroboyContext,
   JsonResult, GET, POST, FromParams,
   FromBody, Deserialize, IContext,
-  __BASE_ROUTE_DECO_FACTORY
+  __BASE_ROUTE_DECO_FACTORY,
+  RenderResult
 } from "astroboy.ts";
 import { STR_OPT } from "../../config/options/strOpt";
 import { DEMO_OPTIONS } from "../../config/options/demo";
@@ -154,17 +155,20 @@ class TestController {
     // throw new Error("fuck");
     // await this.delay(250);
     // console.log(this.base.config);
-    return new JsonResult({
-      status: this.test.demoMethod2(),
-      // config: this.base.getConfig(),
-      // haha: this.notMethod(),
-      // env,
-      query_id: id,
-      query_name: name,
-      query_fuck: fuck,
-      ctx: this.business.ctx === this.base.ctx,
-      t05: this.test.t05 === this.test.t02.t05,
-      t08: this.test.t08 === this.test.t06.t08
+    return new RenderResult({
+      path: "test/index.html",
+      state: {
+        status: this.test.demoMethod2(),
+        // config: this.base.getConfig(),
+        // haha: this.notMethod(),
+        // env,
+        query_id: id,
+        query_name: name,
+        query_fuck: fuck,
+        ctx: this.business.ctx === this.base.ctx,
+        t05: this.test.t05 === this.test.t02.t05,
+        t08: this.test.t08 === this.test.t06.t08
+      }
     });
   }
 

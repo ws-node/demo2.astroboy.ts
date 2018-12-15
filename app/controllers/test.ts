@@ -13,6 +13,8 @@ import {
 import { STR_OPT } from "../../options/strOpt";
 import { DEMO_OPTIONS } from "../../options/demo";
 
+// console.log(require("astroboy.ts"));
+
 function Params(key: string) {
   return FromParams({
     transform: (data) => data[key]

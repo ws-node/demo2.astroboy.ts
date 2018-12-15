@@ -15,4 +15,4 @@ routers:
 
 dev:
 	./node_modules/.bin/atc router
-	./node_modules/.bin/atc dev -I=64001 -T tsconfig.json
+	./node_modules/.bin/atc dev -I -T tsconfig.json

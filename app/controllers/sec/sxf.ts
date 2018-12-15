@@ -1,4 +1,4 @@
-import { Controller, GET, JsonResult, Context, RenderResult } from "astroboy.ts";
+import { Controller, GET, JsonResult, Context, RenderResult, Render } from "astroboy.ts";
 
 class WWWWWW {
 
@@ -41,7 +41,7 @@ class XXXXXX extends WWWWWW {
 @Controller("bbb")
 class TestController extends XXXXXX {
 
-  constructor(private context: Context) {
+  constructor(private context: Context, private render: Render) {
     super(context.ctx);
   }
 
@@ -54,13 +54,14 @@ class TestController extends XXXXXX {
 
   @GET("xxcdc2")
   public xxx2() {
-    return new RenderResult({
-      path: "",
-      engine: "xxx",
-      engines: {
-        xxx: undefined
+    this.render.setView({
+      pageTitle: "woshinidie-title",
+      testKey: 123456,
+      loadFn: () => {
+        return this.context.ctx.url;
       }
     });
+    return new RenderResult("test/index.njk");
   }
 
 }

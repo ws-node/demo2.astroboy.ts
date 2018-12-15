@@ -2,40 +2,6 @@
   [
     "GET",
     [
-      "//api/test/get"
-    ],
-    "test",
-    "Get"
-  ],
-  [
-    "GET",
-    [
-      "//api/test/fuck-you/hei-hei-hei",
-      "//m/test/fuck-you-again/hei-hei-hei",
-      "//xxx/test/hahahahahaha/hei-hei-hei"
-    ],
-    "test",
-    "MyGet"
-  ],
-  [
-    "POST",
-    [
-      "//api/test/post/:type"
-    ],
-    "test",
-    "Post"
-  ],
-  [
-    "GET",
-    [
-      "//api/test/get2/:fuck"
-    ],
-    "test",
-    "GetMore"
-  ],
-  [
-    "GET",
-    [
       "/v1/api/test/get"
     ],
     "test",
@@ -70,14 +36,6 @@
   [
     "GET",
     [
-      "//api/bbb/xxcdc"
-    ],
-    "sec.sxf",
-    "xxx"
-  ],
-  [
-    "GET",
-    [
       "/v1/api/bbb/xxcdc"
     ],
     "sec.sxf",
@@ -86,25 +44,9 @@
   [
     "GET",
     [
-      "//api/aaa/wfewf"
-    ],
-    "sec.sdc.dfc",
-    "xxx"
-  ],
-  [
-    "GET",
-    [
       "/v1/api/aaa/wfewf"
     ],
     "sec.sdc.dfc",
-    "xxx"
-  ],
-  [
-    "GET",
-    [
-      "//api/ddd/wfewf"
-    ],
-    "sec.sdc.sdads.ads",
     "xxx"
   ],
   [

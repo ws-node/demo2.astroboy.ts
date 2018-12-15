@@ -6,11 +6,16 @@
   "configurations": [
     {
       "type": "node",
+      "request": "attach",
+      "name": "Attach-2",
+      "port": 9229
+    },
+    {
+      "type": "node",
       "request": "launch",
-      "name": "TS MODE",
-      "runtimeExecutable": "npm",
+      "name": "DEMO2",
+      "runtimeExecutable": "make",
       "runtimeArgs": [
-        "run-script",
         "dev"
       ],
       "port": 9229,

@@ -1,5 +1,5 @@
 build:
-	./node_modules/.bin/atc router --always --details --filetype ts --approot /v1 --tsconfig tsconfig.json
+	./node_modules/.bin/atc router -A -D
 	rm -rf dist
 	tsc --project tsconfig.npm.json
 	cp tsconfig.npm.json dist
@@ -11,8 +11,8 @@ start-dist:
 	cd dist && ast dev
 
 routers:
-	./node_modules/.bin/atc router --always --details --filetype ts --approot /v1 --tsconfig tsconfig.json
+	./node_modules/.bin/atc router -A -D
 
 dev:
-	./node_modules/.bin/atc router --filetype ts --approot /v1 --tsconfig tsconfig.json
-	./node_modules/.bin/atc dev --inspect=64001 --tsconfig tsconfig.json
+	./node_modules/.bin/atc router
+	./node_modules/.bin/atc dev -I=64001 -T tsconfig.json

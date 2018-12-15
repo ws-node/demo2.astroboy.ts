@@ -15,4 +15,4 @@ routers:
 
 dev:
 	./node_modules/.bin/atc router --filetype ts --approot /v1 --tsconfig tsconfig.json
-	./node_modules/.bin/atc dev --ts --inspect=64001 --tsconfig tsconfig.json
+	./node_modules/.bin/atc dev --inspect=64001 --tsconfig tsconfig.json

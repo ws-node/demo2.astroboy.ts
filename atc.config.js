@@ -1,13 +1,16 @@
 const path = require("path");
 
 module.exports = {
+  tsconfig: "tsconfig.json",
+  inspect: true,
+  // debug: "*",
+  // mock: "http://127.0.0.1:8001",
   routers: {
     enabled: true,
     always: false,
     approot: "/v1",
     filetype: "ts",
-    details: true,
-    tsconfig: "tsconfig.json"
+    details: true
   },
   watch: [
     path.join(__dirname, "app/**/*.*"),

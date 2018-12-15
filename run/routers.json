@@ -44,6 +44,14 @@
   [
     "GET",
     [
+      "/v1/api/bbb/xxcdc2"
+    ],
+    "sec.sxf",
+    "xxx2"
+  ],
+  [
+    "GET",
+    [
       "/v1/api/aaa/wfewf"
     ],
     "sec.sdc.dfc",

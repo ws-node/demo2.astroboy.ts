@@ -3,21 +3,38 @@ import { Render, Injectable, createInjectMixin, AstroboyContext } from "astroboy
 @Injectable({
   token: Render
 })
-export class Render2 {
+// 单继承实现注入分离
+export class Render2 extends Render {
 
-  private _render: Render;
-
-  constructor(private _context: AstroboyContext) {
-    this._render = new Render(_context);
-    this._render.setView({
+  constructor(_context: AstroboyContext) {
+    super(_context);
+    this.setView({
       loadFn01: () => {
-        return `show url: ${this._context.ctx.url}`;
+        return `show url: ${_context.ctx.url}`;
       },
       loadFn02: () => {
-        return `show method : ${this._context.ctx.method}`;
+        return `show method : ${_context.ctx.method}`;
       }
     });
-    return createInjectMixin(this, ["_render"]);
   }
 
 }
+// 多重继承组合实现注入分离
+// export class Render2 {
+
+//   private _render: Render;
+
+//   constructor(private _context: AstroboyContext) {
+//     this._render = new Render(_context);
+//     this._render.setView({
+//       loadFn01: () => {
+//         return `show url: ${this._context.ctx.url}`;
+//       },
+//       loadFn02: () => {
+//         return `show method : ${this._context.ctx.method}`;
+//       }
+//     });
+//     return createInjectMixin(this, ["_render"]);
+//   }
+
+// }

@@ -5,7 +5,6 @@
   <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" />
   <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
   />
-  <title>{{ pageTitle }}</title>
 
 
   <style>
@@ -259,7 +258,7 @@
 
   <style>
     .background-color {
-      background-color: rgb(21, 150, 100) !important;
+      background-color: rgba(189, 83, 90, 1) !important;
     }
 
 
@@ -290,19 +289,17 @@
 <body class="plain error-page-wrapper background-color background-image">
   <div class="content-container">
     <div class="head-line secondary-text-color">
-      200
+      500
     </div>
     <div class="subheader primary-text-color">
-      Load succcessfully
+      Internal Server Error
     </div>
     <hr>
     <div class="clearfix"></div>
     <div class="context primary-text-color">
-      <p>{{ loadFn01() }}</p>
-      <p>{{ loadFn02() }}</p>
-      <div>------</div>
-      {{ testKey }}
-      {{ loadFn() }}
+      <p>
+        An unanticipated exception occurred during the service, please contact your system administrator.
+      </p>
     </div>
     <div class="buttons-container">
       <a class="border-button" href="/" target="_blank">Go To Homepage</a>

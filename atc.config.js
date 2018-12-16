@@ -12,6 +12,9 @@ module.exports = {
     filetype: "ts",
     details: true
   },
+  env: {
+    // NODE_ENV: "production"
+  },
   watch: [
     path.join(__dirname, "app/**/*.*"),
     path.join(__dirname, "config/**/*.*"),

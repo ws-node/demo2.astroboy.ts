@@ -60,7 +60,8 @@ class TestController extends XXXXXX {
       loadFn: () => {
         return this.context.ctx.url;
       }
-    });
+    }, { toSnake: false });
+    // console.log(this.render.views);
     return new RenderResult("test/index.njk");
   }
 

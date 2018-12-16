@@ -1,5 +1,5 @@
 import path from "path";
-import { Server, Astroboy, JSON_RESULT_OPTIONS, JsonResolvers, ENV, Render } from "astroboy.ts";
+import { Server, Astroboy, JSON_RESULT_OPTIONS, JsonResolvers, ENV, Render, RENDER_RESULT_OPTIONS } from "astroboy.ts";
 import { DEMO_OPTIONS } from "../options/demo";
 import { STR_OPT } from "../options/strOpt";
 import { Render2 } from "./services/newRender";
@@ -26,6 +26,10 @@ Server.Create(Astroboy, {
       data: null
     },
     jsonTplKey: "data"
+  })
+  .option(RENDER_RESULT_OPTIONS, {
+    onDevError: { path: "errors/500.dev.njk" },
+    onError: { path: "errors/500.njk" }
   })
   .run({
     onStart: () => console.log("hello world!"),

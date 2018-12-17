@@ -8,11 +8,9 @@ export class DemoBaseFramework extends Astroboy {
 }
 
 import TestService from "./app/services/test";
-import MixinService from "./app/services/mixin";
 import BusinessContext from "./app/services/business-context";
 
 export {
   TestService,
-  MixinService,
   BusinessContext
 };

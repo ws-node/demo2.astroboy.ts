@@ -1,7 +1,7 @@
 build:
 	./node_modules/.bin/atc router -A
 	rm -rf dist
-	cp tsconfig.npm.json dist
+	tsc --project tsconfig.npm.json
 	cp -R config dist/
 
 update:

@@ -1,0 +1,7 @@
+// 基础包项目astroboy.ts
+{
+  "extends": "./tsconfig.npm.json",
+  "compilerOptions": {
+    "outDir": "./package"
+  }
+}

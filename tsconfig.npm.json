@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "sourceMap": true,
-    // "declaration": true,
-    "allowJs": true,
+    "declaration": true,
+    "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "importHelpers": true,

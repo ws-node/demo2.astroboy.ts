@@ -10,6 +10,10 @@ class DemoBaseFramework extends Astroboy {
 
 export class UpgradeServer extends Server {
 
+  static Create(args?: any, framework?: any) {
+    return new UpgradeServer(framework, args);
+  }
+
   constructor(args: any, framework?: any) {
     super(framework || DemoBaseFramework, args);
     this.option(RENDER_RESULT_OPTIONS, { engines: { ejs: EjsEngine } });

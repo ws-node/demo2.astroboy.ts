@@ -31,5 +31,6 @@ export * from "./options/strOpt";
 
 export {
   TestService,
-  BusinessContext
+  BusinessContext,
+  EJS_ENGINE_OPTIONS
 };

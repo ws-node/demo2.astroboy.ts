@@ -1,10 +1,22 @@
 import path from "path";
-import { Astroboy } from "astroboy.ts";
+import { Astroboy, Server, RENDER_RESULT_OPTIONS } from "astroboy.ts";
+import { EJS_ENGINE_OPTIONS, defaultEjsOptions, EjsEngine } from "./app/framework/plugins/ejs";
 
-export class DemoBaseFramework extends Astroboy {
+class DemoBaseFramework extends Astroboy {
   get [Symbol.for("BASE_DIR")]() {
     return path.join(__dirname, ".");
   }
+}
+
+export class UpgradeServer extends Server {
+
+  constructor(args: any, framework?: any) {
+    super(framework || DemoBaseFramework, args);
+    this.option(RENDER_RESULT_OPTIONS, { engines: { ejs: EjsEngine } });
+    this.option(EJS_ENGINE_OPTIONS, defaultEjsOptions);
+    this.scoped(EjsEngine);
+  }
+
 }
 
 import TestService from "./app/services/test";

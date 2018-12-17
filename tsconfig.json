@@ -1,6 +1,6 @@
 // 本地开发astroboy.ts
 {
-  "extends": "./tsconfig.npm.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
@@ -11,8 +11,5 @@
         "../astroboy.ts/src/*"
       ]
     }
-  },
-  "include": [
-    "../astroboy.ts"
-  ]
+  }
 }

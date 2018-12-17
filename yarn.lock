@@ -43,6 +43,10 @@
     "@types/keygrip" "*"
     "@types/node" "*"
 
+"@types/ejs@^2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@types/ejs/-/ejs-2.6.1.tgz#cf9cd850a0fd3a55fc4813c97efb0b6503c6f4e6"
+
 "@types/events@*":
   version "1.2.0"
   resolved "http://registry.npmjs.org/@types/events/-/events-1.2.0.tgz#81a6731ce4df43619e5c8c945383b3e62a89ea86"
@@ -839,6 +843,10 @@ ecc-jsbn@~0.1.1:
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
+
+ejs@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.6.1.tgz#498ec0d495655abc6f23cd61868d926464071aa0"
 
 error-inject@~1.0.0:
   version "1.0.0"

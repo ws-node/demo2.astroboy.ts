@@ -10,6 +10,9 @@ export class DemoBaseFramework extends Astroboy {
 import TestService from "./app/services/test";
 import BusinessContext from "./app/services/business-context";
 
+export * from "./options/demo";
+export * from "./options/strOpt";
+
 export {
   TestService,
   BusinessContext

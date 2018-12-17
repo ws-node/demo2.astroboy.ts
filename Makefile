@@ -3,6 +3,7 @@ build:
 	rm -rf dist
 	tsc --project tsconfig.npm.json
 	cp -R config dist/
+	cp -R app/views dist/app/
 
 update:
 	yarn add astroboy.ts@latest
@@ -24,6 +25,7 @@ pkg:
 	rm -rf package/atc.config.js
 	rm -rf package/atc.config.js.map
 	cp -R config package/
+	cp -R app/views package/app/
 	cp package.json package
 
 publish-pkg:

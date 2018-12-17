@@ -11,5 +11,8 @@
         "../astroboy.ts/src/*"
       ]
     }
-  }
+  },
+  "include": [
+    "../astroboy.ts"
+  ]
 }

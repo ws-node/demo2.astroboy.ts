@@ -272,9 +272,9 @@ astroboy-router@1.2.0-rc.1:
     lodash "^4.17.11"
     reflect-metadata "^0.1.12"
 
-astroboy.ts@^1.0.3-rc.1:
-  version "1.0.3-rc.1"
-  resolved "https://registry.yarnpkg.com/astroboy.ts/-/astroboy.ts-1.0.3-rc.1.tgz#6b782fe9a3052f11b76620b3372bb0b9638d1d68"
+astroboy.ts@^1.0.3-rc.3:
+  version "1.0.3-rc.3"
+  resolved "https://registry.yarnpkg.com/astroboy.ts/-/astroboy.ts-1.0.3-rc.3.tgz#5f93635cb3f53357de5264f055c4b6bc1263d567"
   dependencies:
     "@bonbons/di" "1.3.3"
     "@types/koa" "^2.0.47"
@@ -292,7 +292,7 @@ astroboy.ts@^1.0.3-rc.1:
     nodemon "1.18.8"
     nunjucks "3.1.6"
     rimraf "2.6.2"
-    tsconfig-paths "^3.7.0"
+    tsconfig-paths "3.7.0"
     tslib "^1.9.3"
     uuid "3.3.2"
 
@@ -2623,7 +2623,7 @@ ts-node@^7.0.0, ts-node@^7.0.1:
     source-map-support "^0.5.6"
     yn "^2.0.0"
 
-tsconfig-paths@^3.4.2, tsconfig-paths@^3.7.0:
+tsconfig-paths@3.7.0, tsconfig-paths@^3.4.2, tsconfig-paths@^3.7.0:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.7.0.tgz#02ae978db447b22e09dafcd4198be95c4885ceb2"
   dependencies:

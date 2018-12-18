@@ -1,6 +1,6 @@
 import { Injectable, InjectScope } from "astroboy.ts";
 
-@Injectable({ type: InjectScope.Singleton })
+@Injectable(InjectScope.Singleton)
 class Test02Service {
 
   private value = 98765;

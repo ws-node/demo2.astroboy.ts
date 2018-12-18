@@ -59,6 +59,7 @@ abstract class MixinService implements MixinService.Contract {
 class MixinServiceImplement {
 
   constructor(private context: Context<{}>, private test: TestService, private test02: Test02Service, private data: DataService) {
+    // return createInjectMixin(this, this.context, this.test, this.test02, this.data);
     return createInjectMixin(this, [
       "context",
       "test",

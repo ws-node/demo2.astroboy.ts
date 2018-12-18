@@ -1,5 +1,5 @@
 import { Controller, GET, JsonResult, Context, RenderResult, Render } from "astroboy.ts";
-import path from "path";
+import MixinService from "../../services/mixin";
 class WWWWWW {
 
   constructor(private ctx: any) {
@@ -41,7 +41,7 @@ class XXXXXX extends WWWWWW {
 @Controller("bbb")
 class TestController extends XXXXXX {
 
-  constructor(private context: Context, private render: Render) {
+  constructor(private context: Context, private render: Render, private mixin: MixinService) {
     super(context.ctx);
   }
 
@@ -61,6 +61,7 @@ class TestController extends XXXXXX {
         return this.context.ctx.url;
       }
     }, { toSnake: false });
+    console.log(this.mixin.stamp);
     // console.log(this.render.views);
     return new RenderResult("test/index.njk");
     // return new RenderResult({

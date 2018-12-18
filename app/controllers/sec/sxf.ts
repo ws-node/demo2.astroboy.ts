@@ -1,5 +1,5 @@
 import { Controller, GET, JsonResult, Context, RenderResult, Render } from "astroboy.ts";
-
+import path from "path";
 class WWWWWW {
 
   constructor(private ctx: any) {
@@ -63,6 +63,10 @@ class TestController extends XXXXXX {
     }, { toSnake: false });
     // console.log(this.render.views);
     return new RenderResult("test/index.njk");
+    // return new RenderResult({
+    //   path: "test/index.njk",
+    //   root: path.resolve(__dirname, "../../views2"),
+    // });
   }
 
 }

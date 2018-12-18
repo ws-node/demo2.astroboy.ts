@@ -9,8 +9,27 @@ import T04Service from "./t04";
 import T03Service from "./t03";
 import T02Service from "./t02";
 
+namespace TestService {
+  export interface Contract {
+    readonly thisValue: number;
+    t01: T01Service;
+    t02: T02Service;
+    t03: T03Service;
+    t04: T04Service;
+    t05: T05Service;
+    t06: T06Service;
+    t07: T07Service;
+    t08: T08Service;
+    context: Context;
+    reset(v: number): void;
+    add(v: string): void;
+    demoMethod2(): number;
+    showValue(): number;
+  }
+}
+
 @Injectable()
-class TestService {
+class TestService implements TestService.Contract {
 
   private value = 555;
 

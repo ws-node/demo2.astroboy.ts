@@ -25,12 +25,14 @@ export class UpgradeServer extends Server {
 
 import TestService from "./app/services/test";
 import BusinessContext from "./app/services/business-context";
+import MixinService from "./app/services/mixin";
 
 export * from "./options/demo";
 export * from "./options/strOpt";
 
 export {
   TestService,
+  MixinService,
   BusinessContext,
   EJS_ENGINE_OPTIONS
 };

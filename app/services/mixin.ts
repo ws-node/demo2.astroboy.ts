@@ -2,9 +2,40 @@ import { Injectable, Context, IContext, createInjectMixin } from "astroboy.ts";
 import DataService from "./Data";
 import TestService from "./test";
 import Test02Service from "./test02";
+import T01Service from "./t01";
+import T05Service from "./t05";
+import T06Service from "./t06";
+import T07Service from "./t07";
+import T08Service from "./t08";
+import T04Service from "./t04";
+import T03Service from "./t03";
+import T02Service from "./t02";
 
-// @ts-ignore 多重继承忽略内部部量定义
-abstract class MixinService implements Context<{}>, DataService, TestService, Test02Service {
+namespace MixinService {
+  export interface Contract extends Context.Contract, DataService.Contract, TestService.Contract, Test02Service.Contract {
+    /** 重载：TestService.add */
+    add(v: string): void;
+    /** 重载：Test02Service.add */
+    add(v: number): void;
+    /** 重载：TestService.showValue */
+    showValue(type: 1): number;
+    /** 重载：TestService02.showValue */
+    showValue(type: 2): number;
+    /** 重载：TestService02.showValue */
+    showValue(): number;
+  }
+}
+
+abstract class MixinService implements MixinService.Contract {
+  t01: T01Service;
+  t02: T02Service;
+  t03: T03Service;
+  t04: T04Service;
+  t05: T05Service;
+  t06: T06Service;
+  t07: T07Service;
+  t08: T08Service;
+  context: Context<IContext>;
   public thisValue: number;
   public ctx: IContext;
   public stamp: number;

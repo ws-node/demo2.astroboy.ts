@@ -1,7 +1,14 @@
 import { Injectable, AstroboyContext } from "astroboy.ts";
 
+namespace DataService {
+  export interface Contract {
+    readonly stamp: number;
+    setStamp(v: number): void;
+  }
+}
+
 @Injectable()
-class DataService {
+class DataService implements DataService.Contract {
 
   private value = 0;
 

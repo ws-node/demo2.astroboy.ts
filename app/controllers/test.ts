@@ -159,17 +159,21 @@ class TestController {
     // console.log(this.base.config);
     return new RenderResult({
       path: "test/index.html",
-      state: {
-        status: this.test.demoMethod2(),
-        // config: this.base.getConfig(),
-        // haha: this.notMethod(),
-        // env,
-        query_id: id,
-        query_name: name,
-        query_fuck: fuck,
-        ctx: this.business.ctx === this.base.ctx,
-        t05: this.test.t05 === this.test.t02.t05,
-        t08: this.test.t08 === this.test.t06.t08
+      astConf: {
+        use: true,
+        configs: {},
+        state: {
+          status: this.test.demoMethod2(),
+          // config: this.base.getConfig(),
+          // haha: this.notMethod(),
+          // env,
+          query_id: id,
+          query_name: name,
+          query_fuck: fuck,
+          ctx: this.business.ctx === this.base.ctx,
+          t05: this.test.t05 === this.test.t02.t05,
+          t08: this.test.t08 === this.test.t06.t08
+        }
       }
     });
   }

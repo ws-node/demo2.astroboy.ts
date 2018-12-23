@@ -10,17 +10,27 @@ class DemoBaseFramework extends Astroboy {
 
 export class UpgradeServer extends Server {
 
-  static Create(args?: any, framework?: any) {
-    return new UpgradeServer(framework, args);
+  static Create(framework?: any, args?: any) {
+    return new UpgradeServer(args, framework);
   }
 
   constructor(args: any, framework?: any) {
-    super(framework || DemoBaseFramework, args);
+    super(bindDI(framework) || DemoBaseFramework, args);
     this.option(RENDER_RESULT_OPTIONS, { engines: { ejs: EjsEngine } });
     this.option(EJS_ENGINE_OPTIONS, defaultEjsOptions);
     this.scoped(EjsEngine);
   }
 
+}
+
+function bindDI(ctor: any) {
+  if (!ctor) return undefined;
+  // tslint:disable-next-line:class-name
+  return class BIND_CLASS extends ctor {
+    protected get [Symbol.for("BASE_DIR")]() {
+      return path.join(__dirname, ".");
+    }
+  };
 }
 
 import TestService from "./app/services/test";

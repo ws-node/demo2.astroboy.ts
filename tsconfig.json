@@ -11,5 +11,10 @@
         "../astroboy.ts/src/*"
       ]
     }
-  }
+  },
+  "exclude": [
+    "./package",
+    "./node_modules",
+    "./dist"
+  ]
 }

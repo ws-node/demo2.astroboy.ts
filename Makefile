@@ -1,5 +1,5 @@
 build:
-	./node_modules/.bin/atc router -A
+	npx atc router -A
 	rm -rf dist
 	tsc --project tsconfig.npm.json
 	cp -R config dist/
@@ -12,14 +12,17 @@ start-dist:
 	cd dist && ast dev
 
 routers:
-	./node_modules/.bin/atc router -A
+	npx atc router -A
+
+configs:
+	npx atc config --force
 
 dev:
-	./node_modules/.bin/atc router
-	./node_modules/.bin/atc dev
+	npx atc router
+	npx atc dev
 
 pkg:
-	./node_modules/.bin/atc router -A
+	npx atc router -A
 	rm -rf package
 	tsc --project tsconfig.pkg.json
 	rm -rf package/atc.config.js

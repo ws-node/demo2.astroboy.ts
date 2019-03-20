@@ -12,6 +12,10 @@ module.exports = {
     filetype: "ts",
     details: true
   },
+  configCompiler: {
+    enabled: true,
+    configroot: 'config-ts',
+  },
   env: {
     // NODE_ENV: "production"
   },

@@ -55,7 +55,7 @@ export default class NameClass implements IStrictConfigsCompiler<IConfigs> {
                 d: false,
                 e: "352424"
             },
-            "f": ConfigReader.Expression<{v: string}>(`{ v: path.resolve(__dirname, "abcd") },`)
+            "f": ConfigReader.Expression(`{ v: path.resolve(__dirname, "abcd") },`)
         };
     }
 

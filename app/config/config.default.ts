@@ -1,9 +1,11 @@
 import { IStrictConfigsCompiler, ConfigReader } from "astroboy.ts";
 
+type DIType = "proxy" | "native";
+
 export interface IConfigs {
     "@astroboy.ts": {
         showTrace: boolean;
-        diType: "proxy" | "native";
+        diType: DIType;
     };
     demo: {
         key01: number;
@@ -16,17 +18,26 @@ export interface IConfigs {
         d: boolean,
         e?: string
     };
+    f: {
+        v: string
+    };
 }
 
 export class MyConfigsReader extends ConfigReader<IConfigs> { }
 
 export default class NameClass implements IStrictConfigsCompiler<IConfigs> {
 
+    imports() {
+        return [
+            "const path = require('path');"
+        ];
+    }
+
     configs(process: NodeJS.Process) {
         return {
             "@astroboy.ts": {
                 showTrace: true,
-                diType: <"proxy" | "native">"proxy"
+                diType: <DIType>"proxy"
             },
             "demo": {
                 key01: 12345,
@@ -38,7 +49,8 @@ export default class NameClass implements IStrictConfigsCompiler<IConfigs> {
             "c": {
                 d: false,
                 e: "352424"
-            }
+            },
+            "f": ConfigReader.Expression(`{ v: path.resolve(__dirname, "abcd") },`)
         };
     }
 

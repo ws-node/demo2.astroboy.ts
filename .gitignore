@@ -63,3 +63,4 @@ typings/
 dist
 package
 app/routers
+config

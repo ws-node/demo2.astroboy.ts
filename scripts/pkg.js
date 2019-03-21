@@ -4,7 +4,7 @@ module.exports = {
     add: 1,
     whiteSpace: "  ",
     rootPath: ".",
-    outDist: "dist",
+    outDist: "package",
     useYarn: true,
     outTransform: undefined
 };

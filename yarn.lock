@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@bigmogician/publisher@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.npmjs.org/@bigmogician/publisher/-/publisher-1.0.8.tgz#48263df4c8717526aeaedc122544a47301f65c0d"
+  integrity sha512-TG2Is5corrcNLfziJ4ty/KIZawV2Psc+LtxqEvXoWPFF0k+jS9tS3jbvzZmxaTZgPbPBGCruIDsAcbiu2+2LcA==
+
 "@bonbons/di@^1.4.1-rc.2":
   version "1.4.1-rc.2"
   resolved "https://registry.npmjs.org/@bonbons/di/-/di-1.4.1-rc.2.tgz#aab96530db055abf6c7c6b0c4b198f29f86baa8e"

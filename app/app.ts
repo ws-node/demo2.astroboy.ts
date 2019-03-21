@@ -2,7 +2,7 @@ import path from "path";
 import { Server, Astroboy, JSON_RESULT_OPTIONS, JsonResolvers, ENV, Render, RENDER_RESULT_OPTIONS, SIMPLE_LOGGER_OPTIONS } from "astroboy.ts";
 import { DEMO_OPTIONS } from "../options/demo";
 import { STR_OPT } from "../options/strOpt";
-import { Render2 } from "./services/newRender";
+import { MyConfigsReader } from "./config/config.default";
 
 // new Astroboy({
 //   ROOT_PATH: path.resolve(__dirname, "..")
@@ -32,6 +32,7 @@ Server.Create(Astroboy, {
     onError: { path: "errors/500.njk" }
   })
   .option(SIMPLE_LOGGER_OPTIONS, {level: 0})
+  .scoped(MyConfigsReader)
   .run({
     onStart: () => console.log("hello world!"),
     onError: (err) => console.log(`fuck it : ${String(err)}`)

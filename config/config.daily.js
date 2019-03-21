@@ -1,3 +1,3 @@
 module.exports = {
-  "b": "qa"
+  "b": "daily"
 }

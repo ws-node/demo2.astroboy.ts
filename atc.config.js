@@ -14,7 +14,7 @@ module.exports = {
   },
   configCompiler: {
     enabled: true,
-    configroot: 'config-ts',
+    configroot: 'app/config',
   },
   env: {
     // NODE_ENV: "production"

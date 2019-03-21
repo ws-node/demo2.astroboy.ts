@@ -12,6 +12,7 @@ import {
 } from "astroboy.ts";
 import { STR_OPT } from "../../options/strOpt";
 import { DEMO_OPTIONS } from "../../options/demo";
+import { MyConfigsReader } from "../config/config.default";
 
 // console.log(require("astroboy.ts"));
 
@@ -60,6 +61,7 @@ class TestController {
 
   constructor(
     private configs: Configs,
+    private reader: MyConfigsReader,
     private mixin: MixinService,
     private base: AstroboyContext<IContext & { fakeId: string; }>,
     private business: BusinessContext,
@@ -78,6 +80,7 @@ class TestController {
       id,
       name,
       url: ctx.url,
+      configs: this.reader.global
     });
   }
 

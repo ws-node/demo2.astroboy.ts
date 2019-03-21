@@ -18,6 +18,7 @@ configs:
 	npx atc config --force
 
 dev:
+	npx atc config --force
 	npx atc router
 	npx atc dev
 

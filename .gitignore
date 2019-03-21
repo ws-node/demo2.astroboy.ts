@@ -63,4 +63,4 @@ typings/
 dist
 package
 app/routers
-config
+config/*.js

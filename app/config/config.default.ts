@@ -1,4 +1,4 @@
-import { IStrictConfigsCompiler, ConfigReader } from "astroboy.ts";
+import { IStrictConfigsCompiler, ConfigReader, DefineConfig } from "astroboy.ts";
 
 type DIType = "proxy" | "native";
 
@@ -25,15 +25,37 @@ export interface IConfigs {
 
 export class MyConfigsReader extends ConfigReader<IConfigs> { }
 
+function woshinidie() {
+    xFunc();
+    return 123456;
+}
+
+function sadvgasd() {
+    console.log("fuck");
+}
+
+function resolveV(path: typeof import("path")) {
+    return { v: path.resolve(__dirname, "abcd") };
+}
+
+const xObject = {
+    a: 124,
+    b: "sdfad"
+};
+
+const xFunc = () => {
+    console.log(xObject);
+};
+
+@DefineConfig({
+    modules: { path: "path" },
+    consts: { xFunc, xObject },
+    functions: [ resolveV, woshinidie, sadvgasd ]
+})
 export default class NameClass implements IStrictConfigsCompiler<IConfigs> {
 
     procedures() {
         return [
-            "const path = require('path');",
-            `function woshinidie() { return 123456; }`,
-            `function sadvgasd() {
-                console.log("fuck");
-            }`,
             "sadvgasd();"
         ];
     }
@@ -55,7 +77,8 @@ export default class NameClass implements IStrictConfigsCompiler<IConfigs> {
                 d: false,
                 e: "352424"
             },
-            "f": ConfigReader.Expression(`{ v: path.resolve(__dirname, "abcd") },`)
+            // "f": ConfigReader.Expression(`{ v: path.resolve(__dirname, "abcd") }`),
+            "f": ConfigReader.Expression(`resolveV(path)`)
         };
     }
 

@@ -1,12 +1,20 @@
-import { IConfigsCompiler } from "astroboy.ts";
+import { IConfigsCompiler, DefineConfig, ConfigReader } from "astroboy.ts";
 import { IConfigs } from "./config.default";
 
-export = class NameClass2 implements IConfigsCompiler<IConfigs> {
+function env(path: typeof import("path")) {
+    return path.delimiter === ";" ? "qa" : "unknown";
+}
 
+@DefineConfig({
+    modules: { path: "path" },
+    functions: [ env ]
+})
+class NameClass2 implements IConfigsCompiler<IConfigs> {
     configs(process: NodeJS.Process) {
         return {
-            b: "qa"
+            b: ConfigReader.Expression("env(path)")
         };
     }
+}
 
-};
+export = NameClass2;

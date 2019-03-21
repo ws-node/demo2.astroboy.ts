@@ -15,7 +15,7 @@
     "key02": "woshinidie"
   },
   "strOpt": "test_string_config",
-  "a": 3241234324,
+  "a": 123456,
   "b": "default",
   "c": {
     "d": false,

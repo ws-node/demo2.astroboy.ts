@@ -27,9 +27,14 @@ export class MyConfigsReader extends ConfigReader<IConfigs> { }
 
 export default class NameClass implements IStrictConfigsCompiler<IConfigs> {
 
-    imports() {
+    procedures() {
         return [
-            "const path = require('path');"
+            "const path = require('path');",
+            `function woshinidie() { return 123456; }`,
+            `function sadvgasd() {
+                console.log("fuck");
+            }`,
+            "sadvgasd();"
         ];
     }
 
@@ -44,13 +49,13 @@ export default class NameClass implements IStrictConfigsCompiler<IConfigs> {
                 key02: "woshinidie"
             },
             "strOpt": "test_string_config",
-            "a": 3241234324,
+            "a": ConfigReader.Expression<number>("woshinidie()"),
             "b": "default",
             "c": {
                 d: false,
                 e: "352424"
             },
-            "f": ConfigReader.Expression(`{ v: path.resolve(__dirname, "abcd") },`)
+            "f": ConfigReader.Expression<{v: string}>(`{ v: path.resolve(__dirname, "abcd") },`)
         };
     }
 

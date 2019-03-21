@@ -40,6 +40,8 @@ import MixinService from "./app/services/mixin";
 export * from "./options/demo";
 export * from "./options/strOpt";
 
+export { IConfigs as Demo2Configs } from "./app/config/config.default";
+
 export {
   TestService,
   MixinService,

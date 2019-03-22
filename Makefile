@@ -7,11 +7,14 @@ routers:
 configs:
 	npx atc config --force
 
-dev: configs
+middlewares:
+	npx atc middleware --force
+
+dev: configs middlewares
 	npx atc router
 	npx atc dev
 
-build: configs routers
+build: configs middlewares routers
 	npx atc router -A
 	rm -rf dist
 	tsc --project tsconfig.npm.json
@@ -21,7 +24,7 @@ build: configs routers
 start-dist:
 	cd dist && ast dev
 
-pkg: configs routers
+pkg: configs middlewares routers
 	rm -rf package
 	tsc --project tsconfig.pkg.json
 	rm -rf package/atc.config.js
@@ -32,3 +35,9 @@ pkg: configs routers
 
 publish: pkg
 	npx bmpub publish -C ./scripts/pkg.rc.js
+
+locale-configs:
+	node ../astroboy.ts/dist/bin/atc config --force
+
+locale-middlewares:
+	node ../astroboy.ts/dist/bin/atc middleware --force

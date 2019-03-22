@@ -1,4 +1,4 @@
-import { IStrictConfigsCompiler, ConfigReader, DefineConfig } from "astroboy.ts";
+import { ConfigReader } from "astroboy.ts";
 
 type DIType = "proxy" | "native";
 
@@ -25,61 +25,56 @@ export interface IConfigs {
 
 export class MyConfigsReader extends ConfigReader<IConfigs> { }
 
-function woshinidie() {
+export function woshinidie() {
     xFunc();
     return 123456;
 }
 
-function sadvgasd() {
+export function sadvgasd() {
     console.log("fuck");
 }
 
-function resolveV(path: typeof import("path")) {
+export function resolveV(path: typeof import("path")) {
     return { v: path.resolve(__dirname, "abcd") };
 }
 
-const xObject = {
-    a: 124,
-    b: "sdfad"
-};
+export function xFunc () {
+    console.log({
+        a: 124,
+        b: "sdfad"
+    });
+}
 
-const xFunc = () => {
-    console.log(xObject);
-};
+export function xxxxxv() {
+    return {
+        a: 1234134,
+        b: "245324",
+        c: false,
+        d: {
+            e: [34243, "24353"],
+        },
+        f: Symbol("adsfadf")
+    };
+}
 
-@DefineConfig({
-    modules: { path: "path" },
-    consts: { xFunc, xObject },
-    functions: [ resolveV, woshinidie, sadvgasd ]
-})
-export default class NameClass implements IStrictConfigsCompiler<IConfigs> {
-
-    procedures() {
-        return [
-            "sadvgasd();"
-        ];
-    }
-
-    configs(process: NodeJS.Process) {
-        return {
-            "@astroboy.ts": {
-                showTrace: true,
-                diType: <DIType>"proxy"
-            },
-            "demo": {
-                key01: 12345,
-                key02: "woshinidie"
-            },
-            "strOpt": "test_string_config",
-            "a": ConfigReader.Expression<number>("woshinidie()"),
-            "b": "default",
-            "c": {
-                d: false,
-                e: "352424"
-            },
-            // "f": ConfigReader.Expression(`{ v: path.resolve(__dirname, "abcd") }`),
-            "f": ConfigReader.Expression(`resolveV(path)`)
-        };
-    }
-
+export default function DefaultCOnfigs (): IConfigs {
+    const path = require("path");
+    return {
+        "@astroboy.ts": {
+            showTrace: true,
+            diType: <DIType>"proxy"
+        },
+        "demo": {
+            key01: 12345,
+            key02: "woshinidie"
+        },
+        "strOpt": "test_string_config",
+        "a": woshinidie(),
+        "b": "default",
+        "c": {
+            d: false,
+            e: "352424"
+        },
+        "f": resolveV(path)
+    };
 }

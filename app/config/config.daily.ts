@@ -1,12 +1,8 @@
-import { IConfigsCompiler } from "astroboy.ts";
 import { IConfigs } from "./config.default";
 
-export = class NameClass2 implements IConfigsCompiler<IConfigs> {
-
-    configs(process: NodeJS.Process) {
-        return {
-            b: "daily"
-        };
-    }
-
-};
+export default function NameClass2(): Partial<IConfigs> {
+    const path = require("path");
+    return {
+        b: "daily"
+    };
+}

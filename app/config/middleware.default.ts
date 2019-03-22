@@ -1,5 +1,6 @@
 
-export = {
+export default () => {
+  return {
     "server-init": {
       priority: 0.1,
       enable: true
@@ -8,4 +9,5 @@ export = {
       priority: 5,
       enable: true
     }
-};
+  };
+}

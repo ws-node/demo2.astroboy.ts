@@ -60,7 +60,8 @@ typings/
 # next.js build output
 .next
 
-dist
-package
+dist/**
+package/**
 app/routers
 config/*.js
+app/middlewares/*.js

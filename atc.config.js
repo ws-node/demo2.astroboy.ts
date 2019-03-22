@@ -16,6 +16,10 @@ module.exports = {
     enabled: true,
     configroot: 'app/config',
   },
+  middlewareCompiler: {
+    enabled: true,
+    root: 'app/middlewares/pipes',
+  },
   env: {
     // NODE_ENV: "production"
   },

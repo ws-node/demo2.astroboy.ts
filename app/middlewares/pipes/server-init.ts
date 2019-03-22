@@ -1,7 +1,7 @@
 import { serverInit } from "astroboy.ts";
 
-function DI_INIT(context: any, next: any) {
-    return serverInit(context, next);
+async function DI_INIT(context: any, next: any) {
+    return await serverInit(context, next);
 }
 
 export default DI_INIT;

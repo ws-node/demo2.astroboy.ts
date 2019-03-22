@@ -8,7 +8,8 @@ import {
   JsonResult, GET, POST, FromParams,
   FromBody, Deserialize, IContext,
   __BASE_ROUTE_DECO_FACTORY,
-  RenderResult
+  RenderResult,
+  Render
 } from "astroboy.ts";
 import { STR_OPT } from "../../options/strOpt";
 import { DEMO_OPTIONS } from "../../options/demo";
@@ -65,6 +66,7 @@ class TestController {
     private mixin: MixinService,
     private base: AstroboyContext<IContext & { fakeId: string; }>,
     private business: BusinessContext,
+    private render: Render,
     private data: DataService,
     private test: TestService,
     private test02: Test02Service) {
@@ -154,19 +156,15 @@ class TestController {
     const { id, name, fuck } = params;
     this.test02.add(345);
     this.test.reset(4534);
+    console.log("what ths fuck");
     // const env = this.configs.get(ENV);
     // console.log(env);
     // console.log(this.base);
     // throw new Error("fuck");
     // await this.delay(250);
     // console.log(this.base.config);
-    return new RenderResult({
-      path: "test/index.html",
-      astConf: {
-        use: true,
-        configs: {},
-        state: {
-          status: this.test.demoMethod2(),
+    this.render.setView({
+      status: this.test.demoMethod2(),
           // config: this.base.getConfig(),
           // haha: this.notMethod(),
           // env,
@@ -176,7 +174,13 @@ class TestController {
           ctx: this.business.ctx === this.base.ctx,
           t05: this.test.t05 === this.test.t02.t05,
           t08: this.test.t08 === this.test.t06.t08
-        }
+    });
+    return new RenderResult({
+      path: "test/index.html",
+      astConf: {
+        use: false,
+        configs: {},
+        state: {}
       }
     });
   }

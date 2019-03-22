@@ -36,8 +36,23 @@ pkg: configs middlewares routers
 publish: pkg
 	npx bmpub publish -C ./scripts/pkg.rc.js
 
+locale-routers:
+	npx ts-node ../astroboy.ts/src/cmd/index.ts router -A
+
 locale-configs:
-	node ../astroboy.ts/dist/bin/atc config --force
+	npx ts-node ../astroboy.ts/src/cmd/index.ts config --force
 
 locale-middlewares:
-	node ../astroboy.ts/dist/bin/atc middleware --force
+	npx ts-node ../astroboy.ts/src/cmd/index.ts middleware --force
+
+locale-dev: locale-configs locale-middlewares locale-routers
+	npx ts-node ../astroboy.ts/src/cmd/index.ts dev
+
+locale-pkg: locale-configs locale-middlewares locale-routers
+	rm -rf package
+	tsc --project tsconfig.pkg.json
+	rm -rf package/atc.config.js
+	rm -rf package/atc.config.js.map
+	cp -R config package/
+	cp -R app/views package/app/
+	cp README.md package

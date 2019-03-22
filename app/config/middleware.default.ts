@@ -5,7 +5,7 @@ export default () => {
       priority: 0.1,
       enable: true
     },
-    "demo": {
+    "test": {
       priority: 5,
       enable: true
     }

@@ -18,7 +18,6 @@ dev-only:
 	npx atc dev
 
 build: configs middlewares routers
-	npx atc router -A
 	rm -rf dist
 	tsc --project tsconfig.npm.json
 	cp -R config dist/

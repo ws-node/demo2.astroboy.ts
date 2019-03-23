@@ -21,8 +21,8 @@ async function testMiddleware(context, injector) {
     });
     await this.next();
 }
-export = () => injectScope(async ({ injector, next }: IMiddlewaresScope) => {
+export = (options: any = {}, app: any) => injectScope(async ({ injector, next }: IMiddlewaresScope) => {
   const _p0 = injector.get(astroboy_ts_1.AstroboyContext);
   const _p1 = injector.get(astroboy_ts_2.InjectService);
-  await testMiddleware.call({ next }, _p0, _p1);
+  await testMiddleware.call({ next, options, app }, _p0, _p1);
 });

@@ -1,6 +1,8 @@
 // [astroboy.ts] 自动生成的代码
 import astroboy_ts_1 = require("astroboy.ts");
-async function DI_INIT(context, next) {
+async function DI_INIT({ ctx: context, next }) {
     return await astroboy_ts_1.serverInit(context, next);
 }
-export = () => DI_INIT;
+export = (options: any = {}, app: any) => async (ctx: any, next: any) => {
+    return await DI_INIT(<any>{ ctx, options, app, next });
+};

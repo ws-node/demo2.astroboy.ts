@@ -20,7 +20,7 @@ module.exports = {
   },
   middlewareCompiler: {
     enabled: true,
-    force: true,
+    force: false,
     root: 'app/middlewares/pipes',
   },
   env: {

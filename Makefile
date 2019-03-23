@@ -39,10 +39,10 @@ publish: pkg
 	npx bmpub publish -C ./scripts/pkg.rc.js
 
 locale-configs:
-	npx ts-node ../astroboy.ts/src/cmd/index.ts config --force
+	npx ts-node ../astroboy.ts/src/cmd/index.ts config 
 
 locale-middlewares:
-	npx ts-node ../astroboy.ts/src/cmd/index.ts middleware --force
+	npx ts-node ../astroboy.ts/src/cmd/index.ts middleware
 
 locale-dev: locale-configs locale-middlewares routers
 	npx ts-node ../astroboy.ts/src/cmd/index.ts dev

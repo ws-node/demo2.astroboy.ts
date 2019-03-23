@@ -164,19 +164,20 @@ class TestController {
     // await this.delay(250);
     // console.log(this.base.config);
     this.render.setView({
+      loadFn: () => "fuck",
       status: this.test.demoMethod2(),
-          // config: this.base.getConfig(),
-          // haha: this.notMethod(),
-          // env,
-          query_id: id,
-          query_name: name,
-          query_fuck: fuck,
-          ctx: this.business.ctx === this.base.ctx,
-          t05: this.test.t05 === this.test.t02.t05,
-          t08: this.test.t08 === this.test.t06.t08
+      // config: this.base.getConfig(),
+      // haha: this.notMethod(),
+      // env,
+      query_id: id,
+      query_name: name,
+      query_fuck: fuck,
+      ctx: this.business.ctx === this.base.ctx,
+      t05: this.test.t05 === this.test.t02.t05,
+      t08: this.test.t08 === this.test.t06.t08
     });
     return new RenderResult({
-      path: "test/index.html",
+      path: "test/index.njk",
       astConf: {
         use: false,
         configs: {},

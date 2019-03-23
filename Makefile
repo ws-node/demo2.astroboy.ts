@@ -10,8 +10,11 @@ configs:
 middlewares:
 	npx atc middleware --force
 
-dev: configs middlewares
-	npx atc router
+dev:
+	npx atc router -A
+	npx atc dev
+
+dev-only:
 	npx atc dev
 
 build: configs middlewares routers
@@ -44,6 +47,10 @@ locale-middlewares:
 
 locale-dev: locale-configs locale-middlewares routers
 	npx ts-node ../astroboy.ts/src/cmd/index.ts dev
+
+locale-dev-only:
+	npx ts-node ../astroboy.ts/src/cmd/index.ts dev
+	# node ../astroboy.ts/dist/src/cmd/index.js dev
 
 locale-pkg: locale-configs locale-middlewares routers
 	rm -rf package

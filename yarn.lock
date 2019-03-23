@@ -7,10 +7,10 @@
   resolved "https://registry.npmjs.org/@bigmogician/publisher/-/publisher-1.0.8.tgz#48263df4c8717526aeaedc122544a47301f65c0d"
   integrity sha512-TG2Is5corrcNLfziJ4ty/KIZawV2Psc+LtxqEvXoWPFF0k+jS9tS3jbvzZmxaTZgPbPBGCruIDsAcbiu2+2LcA==
 
-"@bonbons/di@^1.4.1-rc.2":
-  version "1.4.1-rc.2"
-  resolved "https://registry.npmjs.org/@bonbons/di/-/di-1.4.1-rc.2.tgz#aab96530db055abf6c7c6b0c4b198f29f86baa8e"
-  integrity sha512-jE+Ia451AvjgDh5VNElyvV51242D5VZSaIaNVA0W6DX/BaRAWzl8+3PDf4oznFC1ZuWxQ81vNuuweDBNANR/0w==
+"@bonbons/di@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.npmjs.org/@bonbons/di/-/di-1.4.1.tgz#c15c070660bb368dc345bee8a3e225c9229034f7"
+  integrity sha512-QZIXb0eK19adDyMorNpG2tRw38GhDVusvux9fiRVsZbVx1if5/gz7eqfRQ9bRjnu4b38tASQ1tyW0J0/FaEcJQ==
   dependencies:
     reflect-metadata "0.1.12"
 
@@ -285,12 +285,12 @@ astroboy-router@1.2.0-rc.1:
     lodash "^4.17.11"
     reflect-metadata "^0.1.12"
 
-astroboy.ts@^1.1.3-rc.28:
-  version "1.1.3-rc.28"
-  resolved "https://registry.npmjs.org/astroboy.ts/-/astroboy.ts-1.1.3-rc.28.tgz#626b6ea9adcd54039e0becebb34d9c8ca34b07da"
-  integrity sha512-UztEWWT66kSOOMM+twA124uD9sxNd4BLuvgoWX64Ib+5zW1OuC6/pN79urGc5nzUY1tfK0blF0lmDdLv/RHvBw==
+astroboy.ts@^1.1.3-rc.35:
+  version "1.1.3-rc.35"
+  resolved "https://registry.npmjs.org/astroboy.ts/-/astroboy.ts-1.1.3-rc.35.tgz#7ef2b7b51daf6b6201fedcf08434a52e6cc057b3"
+  integrity sha512-ytNF7YwFRnCiEeDBOxUMoa0NHh2ydUUA9D84SaFTpLrzfGokMxVeg+9WvoKR2jphOLfu1P18Bs3n4iKxD9dYtQ==
   dependencies:
-    "@bonbons/di" "^1.4.1-rc.2"
+    "@bonbons/di" "1.4.1"
     "@types/koa" "^2.0.47"
     "@types/koa-router" "^7.0.35"
     "@types/node" "^10.12.10"
@@ -301,12 +301,11 @@ astroboy.ts@^1.1.3-rc.28:
     chalk "2.4.1"
     commander "2.19.0"
     decamelize "1.2.0"
-    lodash "^4.17.11"
-    nodemon "1.18.8"
+    lodash "4.17.11"
     nunjucks "3.1.6"
     rimraf "2.6.2"
     tsconfig-paths "3.7.0"
-    tslib "^1.9.3"
+    tslib "1.9.3"
     uuid "3.3.2"
 
 astroboy@^0.0.38:
@@ -1685,14 +1684,14 @@ lodash.toarray@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.toarray/-/lodash.toarray-4.4.0.tgz#24c4bfcd6b2fba38bfd0594db1179d8e9b656561"
 
+lodash@4.17.11, lodash@>=3.0.0, lodash@^4.17.11:
+  version "4.17.11"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
+
 lodash@4.17.5:
   version "4.17.5"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
   integrity sha512-svL3uiZf1RwhH+cWrfZn3A4+U58wbP0tGVTLQPbjplZxZ8ROD9VLuNgsRniTlLe7OlSqR79RUehXgpBW/s0IQw==
-
-lodash@>=3.0.0, lodash@^4.17.11:
-  version "4.17.11"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
 log-symbols@^2.2.0:
   version "2.2.0"
@@ -1932,7 +1931,7 @@ node-pre-gyp@^0.10.0:
     semver "^5.3.0"
     tar "^4"
 
-nodemon@1.18.8, nodemon@^1.17.3:
+nodemon@^1.17.3:
   version "1.18.8"
   resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.18.8.tgz#eb4c0052dc81395bdc503f3c8ae3cba86ca7146a"
   dependencies:
@@ -2753,7 +2752,7 @@ tsconfig-paths@3.7.0, tsconfig-paths@^3.4.2, tsconfig-paths@^3.7.0:
     minimist "^1.2.0"
     strip-bom "^3.0.0"
 
-tslib@1.9.3, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.3:
+tslib@1.9.3, tslib@^1.8.0, tslib@^1.8.1:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
 

@@ -2,7 +2,8 @@ const path = require("path");
 
 module.exports = {
   tsconfig: "tsconfig.json",
-  inspect: true,
+  inspect: false,
+  compile: true,
   // debug: "*",
   // mock: "http://127.0.0.1:8001",
   routers: {
@@ -14,10 +15,12 @@ module.exports = {
   },
   configCompiler: {
     enabled: true,
+    force: true,
     configroot: 'app/config',
   },
   middlewareCompiler: {
     enabled: true,
+    force: true,
     root: 'app/middlewares/pipes',
   },
   env: {
@@ -25,8 +28,9 @@ module.exports = {
   },
   watch: [
     path.join(__dirname, "app/**/*.*"),
-    path.join(__dirname, "config/**/*.*"),
     path.join(__dirname, "plugins/**/*.*")
   ],
-  ignore: []
+  ignore: [
+    path.join(__dirname, "app/middlewares/*.ts"),
+  ]
 };

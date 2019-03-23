@@ -1,0 +1,1 @@
+export function testC () { console.log("c"); }

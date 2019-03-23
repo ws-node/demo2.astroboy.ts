@@ -65,3 +65,4 @@ package/**
 app/routers
 config/*.js
 app/middlewares/*.js
+app/middlewares/*.ts

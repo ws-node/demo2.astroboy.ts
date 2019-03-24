@@ -8,7 +8,7 @@ module.exports = {
   // mock: "http://127.0.0.1:8001",
   routers: {
     enabled: true,
-    always: false,
+    always: true,
     approot: "/v1",
     filetype: "ts",
     details: true
@@ -20,7 +20,7 @@ module.exports = {
   },
   middlewareCompiler: {
     enabled: true,
-    force: false,
+    force: true,
     root: 'middlewares',
   },
   env: {
@@ -28,6 +28,7 @@ module.exports = {
   },
   watch: [
     path.join(__dirname, "app/**/*.*"),
+    path.join(__dirname, "middlewares/**/*.*"),
     path.join(__dirname, "plugins/**/*.*")
   ],
   ignore: [

@@ -285,10 +285,10 @@ astroboy-router@1.2.0-rc.1:
     lodash "^4.17.11"
     reflect-metadata "^0.1.12"
 
-astroboy.ts@1.1.3-rc.37:
-  version "1.1.3-rc.37"
-  resolved "https://registry.npmjs.org/astroboy.ts/-/astroboy.ts-1.1.3-rc.37.tgz#c89c67cec9cf3a351656b302b27115d01c3d9269"
-  integrity sha512-/HTBw/hfm3I3uJmBAg8saXGEs0+1mMYS0Cs8ACwZb77YlXPjSeiuoyeqGWBq/bOc8XMZAOyJ9HKz2giKt1LsTw==
+astroboy.ts@1.1.3-rc.40:
+  version "1.1.3-rc.40"
+  resolved "https://registry.npmjs.org/astroboy.ts/-/astroboy.ts-1.1.3-rc.40.tgz#336583b8eb7d3a24b2404b16229974b70b86daf8"
+  integrity sha512-gdWqIDpfi4gsEIYtS7BvJE+jhJmwotz/Cwsz6meaGh7Q1mwGPTLzQkQ35z2PvwtlVuBdJMFrc0wx7uEKwCHiRg==
   dependencies:
     "@bonbons/di" "1.4.1"
     "@types/koa" "^2.0.47"

@@ -285,10 +285,28 @@ astroboy-router@1.2.0-rc.1:
     lodash "^4.17.11"
     reflect-metadata "^0.1.12"
 
-astroboy.ts@1.1.3-rc.44:
-  version "1.1.3-rc.44"
-  resolved "https://registry.npmjs.org/astroboy.ts/-/astroboy.ts-1.1.3-rc.44.tgz#a46dcbcd08e06c97dc6fa0a0d96e76f0bc7f18d7"
-  integrity sha512-WZ0XXpW/T2GJAQ3+DZYv9sSzqi/yV2e3GoTxblvCceDAyitInRxUDiiu7PMB9/asgpzsDeil7foe/JhFHDTclQ==
+astroboy.ts@1.1.3-rc.45:
+  version "1.1.3-rc.45"
+  resolved "https://registry.npmjs.org/astroboy.ts/-/astroboy.ts-1.1.3-rc.45.tgz#2308195cee8c993e427d4c5051922d3e6a50aa41"
+  integrity sha512-K3p5Y7mMTDFUFL28fypEoqaIU3nUGAosCKkFsHbPRWmx2CJwcAI5DR13o33cYi0cBcMY8B2eI3n37UbQjf77wg==
+  dependencies:
+    "@bonbons/di" "1.4.1"
+    "@types/koa" "^2.0.47"
+    "@types/koa-router" "^7.0.35"
+    "@types/node" "^10.12.10"
+    "@types/uuid" "3.4.4"
+    astroboy-router "1.2.0-rc.1"
+    camelcase "4.1.0"
+    cerialize "0.1.18"
+    chalk "2.4.1"
+    commander "2.19.0"
+    decamelize "1.2.0"
+    lodash "4.17.11"
+    nunjucks "3.1.6"
+    rimraf "2.6.2"
+    tsconfig-paths "3.7.0"
+    tslib "1.9.3"
+    uuid "3.3.2"
 
 astroboy@^0.0.38:
   version "0.0.38"

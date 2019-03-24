@@ -21,7 +21,7 @@ module.exports = {
   middlewareCompiler: {
     enabled: true,
     force: false,
-    root: 'app/middlewares/pipes',
+    root: 'middlewares',
   },
   env: {
     // NODE_ENV: "production"

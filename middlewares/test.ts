@@ -1,9 +1,9 @@
 import { AstroboyContext } from "astroboy.ts";
 import * as atc from "astroboy.ts";
-import { testA } from "../../utils/testA";
-import { testB } from "../../utils/test-b";
-import { testC } from "../../utils/TestC";
-import { testD } from "../../utils/Test-d";
+import { testA } from "../app/utils/testA";
+import { testB } from "../app/utils/test-b";
+import { testC } from "../app/utils/TestC";
+import { testD } from "../app/utils/Test-d";
 
 export default async function testMiddleware(context: AstroboyContext, injector: atc.InjectService) {
     console.log(new Date().getTime());

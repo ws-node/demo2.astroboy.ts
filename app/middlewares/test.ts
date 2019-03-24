@@ -19,7 +19,8 @@ async function testMiddleware(context, injector) {
         testC: TestC_1.testC,
         testD: Test_d_1.testD
     });
-    throw new Error("fuck");
+    // throw new Error("fuck");
+    await this.next();
 }
 export = (options: any = {}, app: any) => injectScope(async ({ injector, next }: IMiddlewaresScope) => {
   const _p0 = injector.get(astroboy_ts_1.AstroboyContext);

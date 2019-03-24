@@ -18,5 +18,5 @@ export default async function testMiddleware(context: AstroboyContext, injector:
       testC,
       testD
     });
-    await this.next();
+    throw new Error("fuck");
 }

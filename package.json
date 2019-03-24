@@ -1,6 +1,6 @@
 {
   "name": "demo2.astroboy.ts",
-  "version": "1.0.0-rc.21",
+  "version": "1.0.0-rc.23",
   "description": "demo2.astroboy.ts",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "astroboy": "^0.0.38",
-    "astroboy.ts": "1.1.3-rc.45",
+    "astroboy.ts": "1.1.3-rc.47",
     "ejs": "^2.6.1",
     "tslib": "1.9.3"
   }

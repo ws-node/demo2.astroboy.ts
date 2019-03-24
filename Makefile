@@ -1,3 +1,7 @@
+SUBDIRS = configs middlewares app
+.PHONY: subdirs $(SUBDIRS)
+subdirs: $(SUBDIRS)
+
 update:
 	yarn add astroboy.ts@latest
 

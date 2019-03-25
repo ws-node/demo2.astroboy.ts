@@ -7,6 +7,9 @@
       "astroboy.ts": [
         "../astroboy.ts/index.ts"
       ],
+      "astroboy.ts/cmd": [
+        "../astroboy.ts/cdm.ts"
+      ],
       "astroboy.ts/*": [
         "../astroboy.ts/src/*"
       ]

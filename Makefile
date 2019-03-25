@@ -49,7 +49,9 @@ locale-middlewares:
 
 locale-dev:
 	npx ts-node ../astroboy.ts/src/cmd/index.ts dev
-	# node ../astroboy.ts/dist/src/cmd/index.js dev
+
+locale-dev-js:
+	node ../astroboy.ts/dist/src/cmd/index.js dev -C atc.npm.js
 
 locale-compile:
 	npx ts-node ../astroboy.ts/src/cmd/index.ts compile

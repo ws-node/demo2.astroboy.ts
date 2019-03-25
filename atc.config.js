@@ -8,7 +8,7 @@ module.exports = {
   // mock: "http://127.0.0.1:8001",
   routers: {
     enabled: true,
-    always: true,
+    always: false,
     approot: "/v1",
     filetype: "ts",
     details: true

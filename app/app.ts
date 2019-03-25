@@ -31,7 +31,7 @@ Server.Create(Astroboy, {
     onDevError: { path: "errors/500.dev.njk" },
     onError: { path: "errors/500.njk" }
   })
-  .option(SIMPLE_LOGGER_OPTIONS, { level: 0 })
+  .option(SIMPLE_LOGGER_OPTIONS, { level: 3 })
   .scoped(MyConfigsReader)
   .run({
     onStart: () => console.log("hello world!"),

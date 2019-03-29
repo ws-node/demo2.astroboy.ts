@@ -25,9 +25,9 @@ function MyGet(path: string) {
   return BASE_ROUTE_DECO_FACTORY({
     method: "GET",
     tpls: [
-      `api/{{@prefix}}/fuck-you/${path}`,
-      `m/{{@prefix}}/fuck-you-again/${path}`,
-      `xxx/{{@prefix}}/hahahahahaha/${path}`
+      `api/{{@group}}/fuck-you/${path}`,
+      `m/{{@group}}/fuck-you-again/${path}`,
+      `xxx/{{@group}}/hahahahahaha/${path}`
     ]
   });
 }

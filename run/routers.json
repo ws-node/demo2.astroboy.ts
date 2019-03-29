@@ -10,9 +10,9 @@
   [
     "GET",
     [
-      "/v1/api/{{@prefix}}/fuck-you/hei-hei-hei",
-      "/v1/m/{{@prefix}}/fuck-you-again/hei-hei-hei",
-      "/v1/xxx/{{@prefix}}/hahahahahaha/hei-hei-hei"
+      "/v1/api/test/fuck-you/hei-hei-hei",
+      "/v1/m/test/fuck-you-again/hei-hei-hei",
+      "/v1/xxx/test/hahahahahaha/hei-hei-hei"
     ],
     "test",
     "MyGet"

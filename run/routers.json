@@ -2,7 +2,7 @@
   [
     "GET",
     [
-      "/v1/api/test/get"
+      "/v1/test/get"
     ],
     "test",
     "Get"
@@ -10,9 +10,9 @@
   [
     "GET",
     [
-      "/v1/api/test/fuck-you/hei-hei-hei",
-      "/v1/m/test/fuck-you-again/hei-hei-hei",
-      "/v1/xxx/test/hahahahahaha/hei-hei-hei"
+      "/v1/api/{{@prefix}}/fuck-you/hei-hei-hei",
+      "/v1/m/{{@prefix}}/fuck-you-again/hei-hei-hei",
+      "/v1/xxx/{{@prefix}}/hahahahahaha/hei-hei-hei"
     ],
     "test",
     "MyGet"
@@ -20,7 +20,7 @@
   [
     "POST",
     [
-      "/v1/api/test/post/:type"
+      "/v1/test/post/:type"
     ],
     "test",
     "Post"
@@ -28,7 +28,7 @@
   [
     "GET",
     [
-      "/v1/api/test/get2/:fuck"
+      "/v1/test/get2/:fuck"
     ],
     "test",
     "GetMore"
@@ -36,7 +36,7 @@
   [
     "GET",
     [
-      "/v1/api/bbb/xxcdc"
+      "/v1/bbb/xxcdc"
     ],
     "sec.sxf",
     "xxx"
@@ -44,7 +44,7 @@
   [
     "GET",
     [
-      "/v1/api/bbb/xxcdc2"
+      "/v1/bbb/xxcdc2"
     ],
     "sec.sxf",
     "xxx2"
@@ -52,7 +52,7 @@
   [
     "GET",
     [
-      "/v1/api/aaa/wfewf"
+      "/v1/aaa/wfewf"
     ],
     "sec.sdc.dfc",
     "xxx"
@@ -60,7 +60,7 @@
   [
     "GET",
     [
-      "/v1/api/ddd/wfewf"
+      "/v1/ddd/wfewf"
     ],
     "sec.sdc.sdads.ads",
     "xxx"

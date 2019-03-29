@@ -7,15 +7,13 @@ import {
   Controller, Configs, AstroboyContext,
   JsonResult, GET, POST, FromParams,
   FromBody, Deserialize, IContext,
-  __BASE_ROUTE_DECO_FACTORY,
+  BASE_ROUTE_DECO_FACTORY,
   RenderResult,
   Render
 } from "astroboy.ts";
 import { STR_OPT } from "../../options/strOpt";
 import { DEMO_OPTIONS } from "../../options/demo";
 import { MyConfigsReader } from "../config/config.default";
-
-// console.log(require("astroboy.ts"));
 
 function Params(key: string) {
   return FromParams({
@@ -24,7 +22,7 @@ function Params(key: string) {
 }
 
 function MyGet(path: string) {
-  return __BASE_ROUTE_DECO_FACTORY({
+  return BASE_ROUTE_DECO_FACTORY({
     method: "GET",
     tpls: [
       `api/{{@prefix}}/fuck-you/${path}`,

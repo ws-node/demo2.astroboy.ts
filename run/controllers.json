@@ -1,6 +1,6 @@
 [
-  "test",
-  "sec.sxf",
-  "sec.sdc.dfc",
-  "sec.sdc.sdads.ads"
+  "TestController",
+  "sec.SxfController",
+  "sec.sdc.DfxController",
+  "sec.sdc.sdads.AdsController"
 ]

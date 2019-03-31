@@ -4,7 +4,7 @@
     [
       "/v1/test/get"
     ],
-    "test",
+    "TestController",
     "Get"
   ],
   [
@@ -14,7 +14,7 @@
       "/v1/m/test/fuck-you-again/hei-hei-hei",
       "/v1/xxx/test/hahahahahaha/hei-hei-hei"
     ],
-    "test",
+    "TestController",
     "MyGet"
   ],
   [
@@ -22,7 +22,7 @@
     [
       "/v1/test/post/:type"
     ],
-    "test",
+    "TestController",
     "Post"
   ],
   [
@@ -30,7 +30,7 @@
     [
       "/v1/test/get2/:fuck"
     ],
-    "test",
+    "TestController",
     "GetMore"
   ],
   [
@@ -38,7 +38,7 @@
     [
       "/v1/bbb/xxcdc"
     ],
-    "sec.sxf",
+    "sec.SxfController",
     "xxx"
   ],
   [
@@ -46,7 +46,7 @@
     [
       "/v1/bbb/xxcdc2"
     ],
-    "sec.sxf",
+    "sec.SxfController",
     "xxx2"
   ],
   [
@@ -54,7 +54,7 @@
     [
       "/v1/aaa/wfewf"
     ],
-    "sec.sdc.dfc",
+    "sec.sdc.DfxController",
     "xxx"
   ],
   [
@@ -62,7 +62,7 @@
     [
       "/v1/ddd/wfewf"
     ],
-    "sec.sdc.sdads.ads",
+    "sec.sdc.sdads.AdsController",
     "xxx"
   ]
 ]

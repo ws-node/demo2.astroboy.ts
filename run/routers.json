@@ -2,7 +2,7 @@
   [
     "GET",
     [
-      "/v1/test/get"
+      "/v1/api/test"
     ],
     "TestController",
     "Get"
@@ -28,7 +28,7 @@
   [
     "GET",
     [
-      "/v1/test/get2/:fuck"
+      "/v1/api/test"
     ],
     "TestController",
     "GetMore"

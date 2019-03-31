@@ -41,7 +41,8 @@ function Query(key: string, useTypes: any[] = []) {
 function MyGet(path: string) {
   return BASE_ROUTE_DECO_FACTORY({
     method: "GET",
-    tpls: [
+    force: true,
+    patterns: [
       `api/{{@group}}/fuck-you/${path}`,
       `m/{{@group}}/fuck-you-again/${path}`,
       `xxx/{{@group}}/hahahahahaha/${path}`
@@ -72,7 +73,12 @@ class ClassQuery {
   readonly isTrue: boolean;
 }
 
-@Controller("test")
+@Controller({
+  group: "test",
+  pattern: {
+    patterns: ["api/{{@group}}/{{@path}}"]
+  }
+})
 class TestController {
 
   constructor(
@@ -137,7 +143,7 @@ class TestController {
   //   });
   // }
 
-  @POST("post/:type")
+  @POST("post/:type", true)
   public async Post(
     @Param("type") type: string,
     @Query("id") id2: number,

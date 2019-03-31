@@ -143,7 +143,7 @@ class TestController {
   //   });
   // }
 
-  @POST("post/:type", true)
+  @POST("post/:type")
   public async Post(
     @Param("type") type: string,
     @Query("id") id2: number,

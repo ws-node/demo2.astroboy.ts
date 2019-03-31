@@ -2,7 +2,7 @@
   [
     "GET",
     [
-      "/v1/api/test"
+      "/v1/api/test/get"
     ],
     "TestController",
     "Get"
@@ -20,7 +20,7 @@
   [
     "POST",
     [
-      "/v1/test/post/:type"
+      "/v1/api/test/post/:type"
     ],
     "TestController",
     "Post"
@@ -28,7 +28,7 @@
   [
     "GET",
     [
-      "/v1/api/test"
+      "/v1/api/test/get2/:fuck"
     ],
     "TestController",
     "GetMore"

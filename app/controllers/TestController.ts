@@ -8,16 +8,33 @@ import {
   JsonResult, GET, POST, FromParams,
   FromBody, Deserialize, IContext,
   BASE_ROUTE_DECO_FACTORY,
-  RenderResult,
-  Render
+  RenderResult, Render,
+  FromQuery
 } from "astroboy.ts";
 import { STR_OPT } from "../../options/strOpt";
 import { DEMO_OPTIONS } from "../../options/demo";
 import { MyConfigsReader } from "../config/config.default";
 
-function Params(key: string) {
+function Param(key: string) {
   return FromParams({
+    useStatic: true,
     transform: (data) => data[key]
+  });
+}
+
+function Query(key: string, useTypes: any[] = []) {
+  return FromQuery({
+    useStatic: true,
+    transform: (data) =>  data[key],
+    // useTypes,
+    // useStatic: false,
+    // transform: (data) =>  data[key],
+    // finally: (data, types = []) => {
+    //   console.log(types);
+    //   if (types.includes(Number)) return Number(data) || "蔡徐坤";
+    //   if (types.includes(Boolean)) return String(data) === "true";
+    //   return data;
+    // }
   });
 }
 
@@ -122,10 +139,11 @@ class TestController {
 
   @POST("post/:type")
   public async Post(
-    @Params("type") type: string,
-    @Params("id") id2: number,
-    @Params("isTrue") isTrue: boolean,
+    @Param("type") type: string,
+    @Query("id") id2: number,
+    @Query("isTrue") isTrue: boolean,
     @FromBody() body: PostData) {
+    console.log({type, id2, isTrue});
     const { id, name } = body;
     this.mixin.add("222");
     this.mixin.add(222);

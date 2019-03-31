@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   tsconfig: "tsconfig.json",
-  inspect: false,
+  inspect: true,
   compile: true,
   // debug: "*",
   // mock: "http://127.0.0.1:8001",

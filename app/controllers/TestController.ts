@@ -9,7 +9,8 @@ import {
   FromBody, Deserialize, IContext,
   BASE_ROUTE_DECO_FACTORY,
   RenderResult, Render,
-  FromQuery
+  FromQuery,
+  Middlewares
 } from "astroboy.ts";
 import { STR_OPT } from "../../options/strOpt";
 import { DEMO_OPTIONS } from "../../options/demo";
@@ -79,6 +80,18 @@ class ClassQuery {
     patterns: ["api/{{@group}}/{{@path}}"]
   }
 })
+@Middlewares([
+  (context: TestController) => {
+    console.log(context.data);
+    throw new Error("wgnm");
+  }
+], {
+  closeOnThrows: true,
+  onError(context: TestController, error) {
+    console.log(error);
+    context["business"].ctx.body = "nmsl";
+  }
+})
 class TestController {
 
   constructor(
@@ -95,6 +108,7 @@ class TestController {
   }
 
   @GET("get")
+  @Middlewares.Crear()
   public Get(@FromParams() params: GetQuery) {
     const { ctx } = this.base;
     const { id, name } = params;

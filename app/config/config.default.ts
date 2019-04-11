@@ -62,7 +62,7 @@ export default function DefaultCOnfigs (): IConfigs {
     return {
         "@astroboy.ts": {
             showTrace: true,
-            diType: <DIType>"proxy"
+            diType: <DIType>"native"
         },
         "demo": {
             key01: 12345,

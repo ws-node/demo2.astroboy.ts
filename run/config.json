@@ -8,7 +8,7 @@
   },
   "@astroboy.ts": {
     "showTrace": true,
-    "diType": "proxy"
+    "diType": "native"
   },
   "demo": {
     "key01": 12345,

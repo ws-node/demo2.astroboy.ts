@@ -1,4 +1,4 @@
-import { Injectable, Context, injectScope } from "astroboy.ts";
+import { Injectable, Context, injectScope } from "@exoskeleton/core";
 import T05Service from "./t05";
 import T06Service from "./t06";
 import T07Service from "./t07";
@@ -9,7 +9,6 @@ import T02Service from "./t02";
 
 @Injectable({})
 class T01Service {
-
   constructor(
     public t02: T02Service,
     public t03: T03Service,
@@ -18,8 +17,8 @@ class T01Service {
     public t06: T06Service,
     public t07: T07Service,
     public t08: T08Service,
-    public context: Context) { }
-
+    public context: Context
+  ) {}
 }
 
 export = T01Service;

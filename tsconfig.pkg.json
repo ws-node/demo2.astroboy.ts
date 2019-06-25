@@ -1,4 +1,4 @@
-// 基础包项目astroboy.ts
+// 基础包项目@exoskeleton/core
 {
   "extends": "./tsconfig.npm.json",
   "compilerOptions": {

@@ -1,4 +1,4 @@
-import { Injectable, InjectScope } from "astroboy.ts";
+import { Injectable, InjectScope } from "@exoskeleton/core";
 
 namespace Test02Service {
   export interface Contract {
@@ -9,7 +9,6 @@ namespace Test02Service {
 
 @Injectable(InjectScope.Singleton)
 class Test02Service implements Test02Service.Contract {
-
   private value = 98765;
 
   public add(v: number) {
@@ -19,7 +18,6 @@ class Test02Service implements Test02Service.Contract {
   public showValue() {
     return this.value;
   }
-
 }
 
 export = Test02Service;

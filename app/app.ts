@@ -1,5 +1,14 @@
 import path from "path";
-import { Server, Astroboy, JSON_RESULT_OPTIONS, JsonResolvers, ENV, Render, RENDER_RESULT_OPTIONS, SIMPLE_LOGGER_OPTIONS } from "astroboy.ts";
+import {
+  Server,
+  Astroboy,
+  JSON_RESULT_OPTIONS,
+  JsonResolvers,
+  ENV,
+  Render,
+  RENDER_RESULT_OPTIONS,
+  SIMPLE_LOGGER_OPTIONS
+} from "@exoskeleton/core";
 import { DEMO_OPTIONS } from "../options/demo";
 import { STR_OPT } from "../options/strOpt";
 import { MyConfigsReader } from "./config/config.default";
@@ -35,5 +44,5 @@ Server.Create(Astroboy, {
   .scoped(MyConfigsReader)
   .run({
     onStart: () => console.log("hello world!"),
-    onError: (err) => console.log(`fuck it : ${String(err)}`)
+    onError: err => console.log(`fuck it : ${String(err)}`)
   });

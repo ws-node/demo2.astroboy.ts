@@ -1,4 +1,4 @@
-import { Injectable, AstroboyContext } from "astroboy.ts";
+import { Injectable, AstroboyContext } from "@exoskeleton/core";
 
 namespace DataService {
   export interface Contract {
@@ -9,17 +9,17 @@ namespace DataService {
 
 @Injectable()
 class DataService implements DataService.Contract {
-
   private value = 0;
 
-  public get stamp() { return this.value; }
+  public get stamp() {
+    return this.value;
+  }
 
-  constructor(public context: AstroboyContext) { }
+  constructor(public context: AstroboyContext) {}
 
   public setStamp(v: number) {
     this.value = v;
   }
-
 }
 
 export = DataService;

@@ -1,5 +1,5 @@
 import path from "path";
-import { createOptions } from "astroboy.ts";
+import { createOptions } from "@exoskeleton/core";
 
 export interface IEjsRenderOptions {
   root: string;

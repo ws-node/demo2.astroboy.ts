@@ -1,4 +1,4 @@
-import { Injectable, Context } from "astroboy.ts";
+import { Injectable, Context } from "@exoskeleton/core";
 import Test02Service from "./test02";
 import T01Service from "./t01";
 import T05Service from "./t05";
@@ -30,10 +30,11 @@ namespace TestService {
 
 @Injectable()
 class TestService implements TestService.Contract {
-
   private value = 555;
 
-  public get thisValue() { return this.value; }
+  public get thisValue() {
+    return this.value;
+  }
 
   constructor(
     public t01: T01Service,
@@ -45,7 +46,8 @@ class TestService implements TestService.Contract {
     public t07: T07Service,
     public t08: T08Service,
     public context: Context,
-    private inner: Test02Service) { }
+    private inner: Test02Service
+  ) {}
 
   public reset(v: number) {
     this.value = v;
@@ -62,7 +64,6 @@ class TestService implements TestService.Contract {
   public showValue() {
     return this.value;
   }
-
 }
 
 // @Injectable({
@@ -89,7 +90,6 @@ class TestService implements TestService.Contract {
 //   public demoMethod2(): number {
 //     throw new Error("Method not implemented.");
 //   }
-
 
 // }
 

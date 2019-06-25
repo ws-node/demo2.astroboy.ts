@@ -1,15 +1,14 @@
-import { Injectable, Context } from "astroboy.ts";
+import { Injectable, Context } from "@exoskeleton/core";
 import T07Service from "./t07";
 import T08Service from "./t08";
 
 @Injectable()
 class T06Service {
-
   constructor(
     public t07: T07Service,
     public t08: T08Service,
-    public context: Context) { }
-
+    public context: Context
+  ) {}
 }
 
 export = T06Service;

@@ -1,10 +1,14 @@
-import { Controller, GET, JsonResult, Context, RenderResult, Render } from "astroboy.ts";
+import {
+  Controller,
+  GET,
+  JsonResult,
+  Context,
+  RenderResult,
+  Render
+} from "@exoskeleton/core";
 import MixinService from "../../services/mixin";
 class WWWWWW {
-
-  constructor(private ctx: any) {
-
-  }
+  constructor(private ctx: any) {}
 
   protected toJSON(value: any): JsonResult {
     return new JsonResult(value, {
@@ -16,11 +20,9 @@ class WWWWWW {
       jsonTplKey: "data"
     });
   }
-
 }
 
 class XXXXXX extends WWWWWW {
-
   constructor(ctx: any) {
     super(ctx);
   }
@@ -35,13 +37,15 @@ class XXXXXX extends WWWWWW {
       jsonTplKey: "data"
     });
   }
-
 }
 
 @Controller("bbb")
 class TestController extends XXXXXX {
-
-  constructor(private context: Context, private render: Render, private mixin: MixinService) {
+  constructor(
+    private context: Context,
+    private render: Render,
+    private mixin: MixinService
+  ) {
     super(context.ctx);
   }
 
@@ -54,13 +58,16 @@ class TestController extends XXXXXX {
 
   @GET("xxcdc2")
   public xxx2() {
-    this.render.setView({
-      pageTitle: "woshinidie-title",
-      testKey: 123456,
-      loadFn: () => {
-        return this.context.ctx.url;
-      }
-    }, { toSnake: false });
+    this.render.setView(
+      {
+        pageTitle: "woshinidie-title",
+        testKey: 123456,
+        loadFn: () => {
+          return this.context.ctx.url;
+        }
+      },
+      { toSnake: false }
+    );
     console.log(this.mixin.stamp);
     // console.log(this.render.views);
     return new RenderResult("test/index.njk");
@@ -69,6 +76,5 @@ class TestController extends XXXXXX {
     //   root: path.resolve(__dirname, "../../views2"),
     // });
   }
-
 }
 export = TestController;

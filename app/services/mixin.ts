@@ -1,4 +1,9 @@
-import { Injectable, Context, IContext, createInjectMixin } from "astroboy.ts";
+import {
+  Injectable,
+  Context,
+  IContext,
+  createInjectMixin
+} from "@exoskeleton/core";
 import DataService from "./Data";
 import TestService from "./test";
 import Test02Service from "./test02";
@@ -12,7 +17,11 @@ import T03Service from "./t03";
 import T02Service from "./t02";
 
 namespace MixinService {
-  export interface Contract extends Context.Contract, DataService.Contract, TestService.Contract, Test02Service.Contract {
+  export interface Contract
+    extends Context.Contract,
+      DataService.Contract,
+      TestService.Contract,
+      Test02Service.Contract {
     /** 重载：TestService.add */
     add(v: string): void;
     /** 重载：Test02Service.add */
@@ -57,15 +66,14 @@ abstract class MixinService implements MixinService.Contract {
 
 @Injectable({ token: MixinService })
 class MixinServiceImplement {
-
-  constructor(private context: Context<{}>, private test: TestService, private test02: Test02Service, private data: DataService) {
+  constructor(
+    private context: Context<{}>,
+    private test: TestService,
+    private test02: Test02Service,
+    private data: DataService
+  ) {
     // return createInjectMixin(this, this.context, this.test, this.test02, this.data);
-    return createInjectMixin(this, [
-      "context",
-      "test",
-      "test02",
-      "data"
-    ]);
+    return createInjectMixin(this, ["context", "test", "test02", "data"]);
   }
 
   public add(v: number | string): void {
@@ -77,7 +85,6 @@ class MixinServiceImplement {
     if (type === 1) return this.test.showValue();
     return this.test02.showValue();
   }
-
 }
 
 export = MixinService;

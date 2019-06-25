@@ -1,6 +1,6 @@
 import ejs, { Options } from "ejs";
 import path from "path";
-import { Injectable, IViewEngine, Configs, Render } from "astroboy.ts";
+import { Injectable, IViewEngine, Configs, Render } from "@exoskeleton/core";
 import { EJS_ENGINE_OPTIONS } from "./options";
 
 @Injectable()

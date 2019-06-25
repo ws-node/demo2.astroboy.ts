@@ -1,6 +1,10 @@
 import path from "path";
-import { Astroboy, Server, RENDER_RESULT_OPTIONS } from "astroboy.ts";
-import { EJS_ENGINE_OPTIONS, defaultEjsOptions, EjsEngine } from "./app/framework/plugins/ejs";
+import { Astroboy, Server, RENDER_RESULT_OPTIONS } from "@exoskeleton/core";
+import {
+  EJS_ENGINE_OPTIONS,
+  defaultEjsOptions,
+  EjsEngine
+} from "./app/framework/plugins/ejs";
 
 class DemoBaseFramework extends Astroboy {
   get [Symbol.for("BASE_DIR")]() {
@@ -9,7 +13,6 @@ class DemoBaseFramework extends Astroboy {
 }
 
 export class UpgradeServer extends Server {
-
   static Create(framework?: any, args?: any) {
     return new UpgradeServer(args, framework);
   }
@@ -20,7 +23,6 @@ export class UpgradeServer extends Server {
     this.option(EJS_ENGINE_OPTIONS, defaultEjsOptions);
     this.scoped(EjsEngine);
   }
-
 }
 
 function bindDI(ctor: any) {
@@ -42,9 +44,4 @@ export * from "./options/strOpt";
 
 export { IConfigs as Demo2Configs } from "./app/config/config.default";
 
-export {
-  TestService,
-  MixinService,
-  BusinessContext,
-  EJS_ENGINE_OPTIONS
-};
+export { TestService, MixinService, BusinessContext, EJS_ENGINE_OPTIONS };

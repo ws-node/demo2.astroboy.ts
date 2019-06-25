@@ -2,23 +2,20 @@ SUBDIRS = configs middlewares app
 .PHONY: subdirs $(SUBDIRS)
 subdirs: $(SUBDIRS)
 
-update:
-	yarn add astroboy.ts@latest
-
 routers:
-	npx atc router -A
+	npx exoskeleton router -A
 
 configs:
-	npx atc config --force
+	npx exoskeleton config --force
 
 middlewares:
-	npx atc middleware --force
+	npx exoskeleton middleware --force
 
 dev:
-	npx atc dev
+	npx exoskeleton dev
 
 dev-only:
-	npx atc dev
+	npx exoskeleton dev
 
 build: configs middlewares routers
 	rm -rf dist

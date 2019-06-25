@@ -1,5 +1,4 @@
-
-import { createConfig } from "astroboy.ts";
+import { createConfig } from "@exoskeleton/core";
 
 interface DemoOptions {
   /** ccccc */

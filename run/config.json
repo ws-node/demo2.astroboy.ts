@@ -6,7 +6,7 @@
     "defaultViewEngine": "",
     "mapping": {}
   },
-  "@astroboy.ts": {
+  "@@exoskeleton/core": {
     "showTrace": true,
     "diType": "native"
   },

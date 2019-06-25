@@ -1,8 +1,8 @@
-// [astroboy.ts] 自动生成的代码
-import astroboy_ts_1 = require("astroboy.ts");
+// [@exoskeleton/cli] 自动生成的代码
+import core_1 = require("@exoskeleton/core");
 async function DI_INIT({ ctx: context, next }) {
     try {
-        return await astroboy_ts_1.serverInit(context, next);
+        return await core_1.serverInit(context, next);
     }
     catch (error) {
         console.log("DI UNHANDLED ERROR : ");

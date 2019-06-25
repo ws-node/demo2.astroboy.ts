@@ -1,7 +1,7 @@
-// [astroboy.ts] 自动生成的代码
-import { injectScope, IMiddlewaresScope } from "astroboy.ts";
-import astroboy_ts_1 = require("astroboy.ts");
-import * as astroboy_ts_2 from "astroboy.ts";
+// [@exoskeleton/cli] 自动生成的代码
+import { injectScope, IMiddlewaresScope } from "@exoskeleton/core";
+import core_1 = require("@exoskeleton/core");
+import * as core_2 from "@exoskeleton/core";
 import testA_1 = require("../utils/testA");
 import test_b_1 = require("../utils/test-b");
 import TestC_1 = require("../utils/TestC");
@@ -23,7 +23,7 @@ async function testMiddleware(context, injector) {
     await this.next();
 }
 export = (options: any = {}, app: any) => injectScope(async ({ injector, next }: IMiddlewaresScope) => {
-  const _p0 = injector.get(astroboy_ts_1.AstroboyContext);
-  const _p1 = injector.get(astroboy_ts_2.InjectService);
+  const _p0 = injector.get(core_1.AstroboyContext);
+  const _p1 = injector.get(core_2.InjectService);
   await testMiddleware.call({ next, options, app }, _p0, _p1);
 });

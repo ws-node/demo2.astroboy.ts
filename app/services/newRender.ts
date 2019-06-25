@@ -1,11 +1,15 @@
-import { Render, Injectable, createInjectMixin, AstroboyContext } from "astroboy.ts";
+import {
+  Render,
+  Injectable,
+  createInjectMixin,
+  AstroboyContext
+} from "@exoskeleton/core";
 
 @Injectable({
   token: Render
 })
 // 单继承实现注入分离
 export class Render2 extends Render {
-
   constructor(_context: AstroboyContext) {
     super(_context);
     this.setView({
@@ -17,7 +21,6 @@ export class Render2 extends Render {
       }
     });
   }
-
 }
 // 多重继承组合实现注入分离
 // export class Render2 {

@@ -61,7 +61,8 @@
   {
     "priority": 20,
     "name": "astroboy-security-xss",
-    "enable": true
+    "enable": true,
+    "options": {}
   },
   {
     "priority": 300,

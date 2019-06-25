@@ -4,14 +4,22 @@ import BusinessContext from "../services/business-context";
 import DataService from "../services/Data";
 import MixinService from "../services/mixin";
 import {
-  Controller, Configs, AstroboyContext,
-  JsonResult, GET, POST, FromParams,
-  FromBody, Deserialize, IContext,
+  Controller,
+  Configs,
+  AstroboyContext,
+  JsonResult,
+  GET,
+  POST,
+  FromParams,
+  FromBody,
+  Deserialize,
+  IContext,
   BASE_ROUTE_DECO_FACTORY,
-  RenderResult, Render,
+  RenderResult,
+  Render,
   FromQuery,
   Middlewares
-} from "astroboy.ts";
+} from "@exoskeleton/core";
 import { STR_OPT } from "../../options/strOpt";
 import { DEMO_OPTIONS } from "../../options/demo";
 import { MyConfigsReader } from "../config/config.default";
@@ -19,14 +27,14 @@ import { MyConfigsReader } from "../config/config.default";
 function Param(key: string) {
   return FromParams({
     useStatic: true,
-    transform: (data) => data[key]
+    transform: data => data[key]
   });
 }
 
 function Query(key: string, useTypes: any[] = []) {
   return FromQuery({
     useStatic: true,
-    transform: (data) =>  data[key],
+    transform: data => data[key]
     // useTypes,
     // useStatic: false,
     // transform: (data) =>  data[key],
@@ -63,7 +71,6 @@ interface PostData {
 }
 
 class ClassQuery {
-
   @Deserialize()
   readonly id: number;
 
@@ -80,32 +87,33 @@ class ClassQuery {
     patterns: ["api/{{@group}}/{{@path}}"]
   }
 })
-@Middlewares([
-  (context: TestController) => {
-    console.log(context.data);
-    throw new Error("wgnm");
+@Middlewares(
+  [
+    (context: TestController) => {
+      console.log(context.data);
+      throw new Error("wgnm");
+    }
+  ],
+  {
+    closeOnThrows: true,
+    onError(context: TestController, error) {
+      console.log(error);
+      context["business"].ctx.body = "nmsl";
+    }
   }
-], {
-  closeOnThrows: true,
-  onError(context: TestController, error) {
-    console.log(error);
-    context["business"].ctx.body = "nmsl";
-  }
-})
+)
 class TestController {
-
   constructor(
     private configs: Configs,
     private reader: MyConfigsReader,
     private mixin: MixinService,
-    private base: AstroboyContext<IContext & { fakeId: string; }>,
+    private base: AstroboyContext<IContext & { fakeId: string }>,
     private business: BusinessContext,
     private render: Render,
     private data: DataService,
     private test: TestService,
-    private test02: Test02Service) {
-
-  }
+    private test02: Test02Service
+  ) {}
 
   @GET("get")
   @Middlewares.Crear()
@@ -162,8 +170,9 @@ class TestController {
     @Param("type") type: string,
     @Query("id") id2: number,
     @Query("isTrue") isTrue: boolean,
-    @FromBody() body: PostData) {
-    console.log({type, id2, isTrue});
+    @FromBody() body: PostData
+  ) {
+    console.log({ type, id2, isTrue });
     const { id, name } = body;
     this.mixin.add("222");
     this.mixin.add(222);
@@ -229,7 +238,6 @@ class TestController {
   private delay(time = 100) {
     return new Promise(resolve => setTimeout(resolve, time));
   }
-
 }
 
 export = TestController;

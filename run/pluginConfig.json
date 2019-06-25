@@ -1,0 +1,22 @@
+{
+  "astroboy-body": {
+    "enable": true,
+    "path": "/Users/bigmogician/Documents/github.com/exoskeleton/core/node_modules/astroboy/plugins/astroboy-body"
+  },
+  "astroboy-router": {
+    "enable": true,
+    "path": "/Users/bigmogician/Documents/github.com/exoskeleton/core/node_modules/astroboy/plugins/astroboy-router"
+  },
+  "astroboy-security": {
+    "enable": true,
+    "path": "/Users/bigmogician/Documents/github.com/exoskeleton/core/node_modules/astroboy/plugins/astroboy-security"
+  },
+  "astroboy-static": {
+    "enable": true,
+    "path": "/Users/bigmogician/Documents/github.com/exoskeleton/core/node_modules/astroboy/plugins/astroboy-static"
+  },
+  "astroboy-view": {
+    "enable": true,
+    "path": "/Users/bigmogician/Documents/github.com/exoskeleton/core/node_modules/astroboy/plugins/astroboy-view"
+  }
+}

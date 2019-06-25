@@ -1,12 +1,8 @@
-import { Controller, GET } from "astroboy.ts";
+import { Controller, GET } from "@exoskeleton/core";
 
 @Controller("ddd")
 class TestController {
-
   @GET("wfewf")
-  public xxx() {
-
-  }
-
+  public xxx() {}
 }
 export = TestController;

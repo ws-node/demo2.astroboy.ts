@@ -1,23 +1,12 @@
-// 本地开发astroboy.ts
+// 本地开发@exoskeleton/core
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "astroboy.ts": [
-        "../astroboy.ts/index.ts"
-      ],
-      "astroboy.ts/cmd": [
-        "../astroboy.ts/cdm.ts"
-      ],
-      "astroboy.ts/*": [
-        "../astroboy.ts/src/*"
-      ]
+      "@exoskeleton/core": ["../../exoskeleton/core/src/index.ts"],
+      "@exoskeleton/core/*": ["../../exoskeleton/core/src/*"]
     }
   },
-  "exclude": [
-    "./package",
-    "./node_modules",
-    "./dist"
-  ]
+  "exclude": ["./package", "./node_modules", "./dist"]
 }

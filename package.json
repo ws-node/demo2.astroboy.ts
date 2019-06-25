@@ -1,6 +1,6 @@
 {
   "name": "demo2.astroboy.ts",
-  "version": "1.0.0-rc.24",
+  "version": "1.0.0-rc.25",
   "description": "demo2.astroboy.ts",
   "main": "index.js",
   "scripts": {
@@ -29,8 +29,8 @@
     "typescript": "3.2.1"
   },
   "dependencies": {
-    "@exoskeleton/core": "0.0.1-rc.1561448510186",
-    "astroboy": "1.1.0-beta.3",
+    "@exoskeleton/core": "0.0.1-rc.1561453730725",
+    "astroboy": "1.1.0-beta.4",
     "ejs": "^2.6.1",
     "tslib": "1.9.3"
   }

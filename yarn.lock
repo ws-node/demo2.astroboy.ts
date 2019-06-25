@@ -14,10 +14,10 @@
   dependencies:
     reflect-metadata "0.1.12"
 
-"@exoskeleton/cli@0.0.1-rc.1561455328425":
-  version "0.0.1-rc.1561455328425"
-  resolved "https://registry.npmjs.org/@exoskeleton/cli/-/cli-0.0.1-rc.1561455328425.tgz#a66f0c821250cb543abd843f2fbbc59e1a11b7e3"
-  integrity sha512-2paiB9GZJ69jkLAC2rwfI1ZUo42+s0fgSIEmNeA63B6zQWv6OBAZlpLV9Oq8SSZLz+tnWCiuY/vAuei+0PY6uA==
+"@exoskeleton/cli@0.0.3":
+  version "0.0.3"
+  resolved "https://registry.npmjs.org/@exoskeleton/cli/-/cli-0.0.3.tgz#d524df88010b2d8155d71dad9f0fd99157e1e78b"
+  integrity sha512-bOtZqNem8ACZduosqxWghHVThO6fQXUaNPBEV5R+ZWDTRyJ+LVLVNuf21hwYphRS1bnsheilfvWZyg+6VVUKIQ==
   dependencies:
     chalk "^2.4.2"
     chokidar "^3.0.1"

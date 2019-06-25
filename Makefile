@@ -39,22 +39,22 @@ publish: pkg
 	npx bmpub publish -C ./scripts/pkg.rc.js
 
 locale-routers:
-	npx ts-node ../astroboy.ts/src/cmd/index.ts router 
+	npx ts-node ../../exoskeleton/cli/src/index.ts router 
 
 locale-configs:
-	npx ts-node ../astroboy.ts/src/cmd/index.ts config 
+	npx ts-node ../../exoskeleton/cli/src/index.ts config 
 
 locale-middlewares:
-	npx ts-node ../astroboy.ts/src/cmd/index.ts middleware
+	npx ts-node ../../exoskeleton/cli/src/index.ts middleware
 
 locale-dev:
-	npx ts-node ../astroboy.ts/src/cmd/index.ts dev
+	npx ts-node ../../exoskeleton/cli/src/index.ts dev
 
 locale-dev-js:
 	node ../astroboy.ts/dist/src/cmd/index.js dev -C atc.npm.js
 
 locale-compile:
-	npx ts-node ../astroboy.ts/src/cmd/index.ts compile
+	npx ts-node ../../exoskeleton/cli/src/index.ts compile
 
 locale-pkg: locale-compile
 	rm -rf package

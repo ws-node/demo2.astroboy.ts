@@ -14,10 +14,10 @@
   dependencies:
     reflect-metadata "0.1.12"
 
-"@exoskeleton/cli@^0.0.1-rc.1561444609717":
-  version "0.0.1-rc.1561444609717"
-  resolved "https://registry.npmjs.org/@exoskeleton/cli/-/cli-0.0.1-rc.1561444609717.tgz#e803ddad71b4e6ef1aa855881613ef3cff610ae2"
-  integrity sha512-mJC+m9JQ8gUhAPfkLuth18GbXwjW05Je3uC9OisTEJL+GgcytQ5NJU+xYxe9NbGJ8j/cNchX3257qdSz+qKaUA==
+"@exoskeleton/cli@0.0.1-rc.1561455328425":
+  version "0.0.1-rc.1561455328425"
+  resolved "https://registry.npmjs.org/@exoskeleton/cli/-/cli-0.0.1-rc.1561455328425.tgz#a66f0c821250cb543abd843f2fbbc59e1a11b7e3"
+  integrity sha512-2paiB9GZJ69jkLAC2rwfI1ZUo42+s0fgSIEmNeA63B6zQWv6OBAZlpLV9Oq8SSZLz+tnWCiuY/vAuei+0PY6uA==
   dependencies:
     chalk "^2.4.2"
     chokidar "^3.0.1"
@@ -28,10 +28,10 @@
     tslib "^1.10.0"
     uuid "^3.3.2"
 
-"@exoskeleton/core@0.0.1-rc.1561448510186":
-  version "0.0.1-rc.1561448510186"
-  resolved "https://registry.npmjs.org/@exoskeleton/core/-/core-0.0.1-rc.1561448510186.tgz#6a0762bcb883fb233522ea5b17400c82ecd933b3"
-  integrity sha512-SzzbqxTnOiJP9f1ghYL+Y5XdPSfSz3JnOpSCsChIhERy5xkN2fGJbvWEPDuzwEz9X86VOfpATge4LYK9GsiOKg==
+"@exoskeleton/core@0.0.1-rc.1561453730725":
+  version "0.0.1-rc.1561453730725"
+  resolved "https://registry.npmjs.org/@exoskeleton/core/-/core-0.0.1-rc.1561453730725.tgz#4d9b733c021ce72ced398623c79f5b1d09703d87"
+  integrity sha512-l9Sk9CYeIXNg7vFQ/bWSnHzKSSVS9hBqedQHAQgFlccPTFA0oJqHuypbzKlmVvhud7JoUh+13wfSKyow37pV4w==
   dependencies:
     "@bonbons/di" "1.4.1"
     "@types/camelcase" "4.1.0"
@@ -390,10 +390,10 @@ astroboy-router@2.2.1:
     reflect-metadata "0.1.12"
     tslib "1.9.3"
 
-astroboy@1.1.0-beta.3:
-  version "1.1.0-beta.3"
-  resolved "https://registry.npmjs.org/astroboy/-/astroboy-1.1.0-beta.3.tgz#9e3dad46a578e747f836ed18c2b4a27d7e420800"
-  integrity sha512-9IdF/wLyyn/tpQPdaLU1WjKxv6g00iALiai3gwcj3skz1l8sVX05w6EfN0kgV1zMJUBpAKQGTxW1GV8Jmz3CWw==
+astroboy@1.1.0-beta.4:
+  version "1.1.0-beta.4"
+  resolved "https://registry.npmjs.org/astroboy/-/astroboy-1.1.0-beta.4.tgz#586e1c07ecf8fb364a243c52ac44d98b87913859"
+  integrity sha512-Gr6nCEK5hOeFw83tlaZYmRtw04DCqnGXM2xs1HZ7BgLHaMmIN0JLUbM0Ot98VpipefIDSsIv9ndP+4HrMIbUgw==
   dependencies:
     "@types/fs-extra" "^5.1.0"
     "@types/koa" "^2.0.46"

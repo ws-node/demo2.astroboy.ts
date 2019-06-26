@@ -20,7 +20,7 @@
   "homepage": "https://github.com/ws-node/demo2.astroboy.ts#readme",
   "devDependencies": {
     "@bigmogician/publisher": "^1.0.8",
-    "@exoskeleton/cli": "0.0.4",
+    "@exoskeleton/cli": "0.0.6",
     "@types/ejs": "^2.6.1",
     "astroboy-cli": "^0.0.8",
     "ts-node": "^7.0.1",

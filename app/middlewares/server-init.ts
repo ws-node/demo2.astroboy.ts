@@ -1,8 +1,7 @@
-// [@exoskeleton/cli] 自动生成的代码
-import core_1 = require("@exoskeleton/core");
+import { serverInit, IMiddlewaresScope, injectScope } from "@exoskeleton/core";
 async function DI_INIT({ ctx: context, next }) {
     try {
-        return await core_1.serverInit(context, next);
+        return await serverInit(context, next);
     }
     catch (error) {
         console.log("DI UNHANDLED ERROR : ");
@@ -10,5 +9,5 @@ async function DI_INIT({ ctx: context, next }) {
     }
 }
 export = (options: any = {}, app: any) => async (ctx: any, next: any) => {
-    return await DI_INIT(<any>{ ctx, options, app, next });
+    return await DI_INIT(({ ctx, options, app, next } as any));
 };

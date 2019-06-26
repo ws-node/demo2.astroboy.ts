@@ -1,6 +1,6 @@
 import { serverInit } from "@exoskeleton/core";
 
-async function DI_INIT({ ctx: context, next }) {
+export default async function DI_INIT({ ctx: context, next }) {
   try {
     return await serverInit(context, next);
   } catch (error) {
@@ -8,5 +8,3 @@ async function DI_INIT({ ctx: context, next }) {
     console.log(error);
   }
 }
-
-export default DI_INIT;

@@ -1,21 +1,11 @@
 [
   {
-    "priority": 0.1,
-    "name": "server-init",
-    "enable": true
-  },
-  {
     "priority": 3,
     "name": "astroboy-static",
     "enable": true,
     "options": {
       "root": "/tmp/static"
     }
-  },
-  {
-    "priority": 5,
-    "name": "test",
-    "enable": true
   },
   {
     "priority": 10,

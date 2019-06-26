@@ -1,29 +1,27 @@
-// [@exoskeleton/cli] 自动生成的代码
-import { injectScope, IMiddlewaresScope } from "@exoskeleton/core";
-import core_1 = require("@exoskeleton/core");
-import * as core_2 from "@exoskeleton/core";
-import testA_1 = require("../utils/testA");
-import test_b_1 = require("../utils/test-b");
-import TestC_1 = require("../utils/TestC");
-import Test_d_1 = require("../utils/Test-d");
-async function testMiddleware(context, injector) {
+import { AstroboyContext, IMiddlewaresScope, injectScope } from "@exoskeleton/core";
+import * as atc from "@exoskeleton/core";
+import { testA } from "../utils/testA";
+import { testB } from "../utils/test-b";
+import { testC } from "../utils/TestC";
+import { testD } from "../utils/Test-d";
+async function testMiddleware(context: AstroboyContext, injector: atc.InjectService) {
     console.log(new Date().getTime());
     console.log(context.ctx.url);
-    await testA_1.testA();
-    await test_b_1.testB();
-    await Test_d_1.testD();
-    await TestC_1.testC();
+    await testA();
+    await testB();
+    await testD();
+    await testC();
     console.log({
-        testA: testA_1.testA,
-        testB: test_b_1.testB,
-        testC: TestC_1.testC,
-        testD: Test_d_1.testD
+        testA,
+        testB,
+        testC,
+        testD
     });
     // throw new Error("fuck");
     await this.next();
 }
 export = (options: any = {}, app: any) => injectScope(async ({ injector, next }: IMiddlewaresScope) => {
-  const _p0 = injector.get(core_1.AstroboyContext);
-  const _p1 = injector.get(core_2.InjectService);
-  await testMiddleware.call({ next, options, app }, _p0, _p1);
+    const _p0 = injector.get(AstroboyContext);
+    const _p1 = injector.get(atc.InjectService);
+    await testMiddleware.call({ next, options, app }, _p0, _p1);
 });
